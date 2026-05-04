@@ -1,0 +1,85 @@
+# ──────────────────────────────────────────────
+# Python
+# ──────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.Python
+
+# Entorno virtual
+venv/
+env/
+.venv/
+ENV/
+
+# ──────────────────────────────────────────────
+# Variables de entorno (¡nunca subir al repo!)
+# ──────────────────────────────────────────────
+.env
+*.env.local
+*.env.*.local
+
+# ──────────────────────────────────────────────
+# Archivos subidos por usuarios
+# ──────────────────────────────────────────────
+backend/uploads/
+
+# ──────────────────────────────────────────────
+# IDEs y editores
+# ──────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ──────────────────────────────────────────────
+# Sistema operativo
+# ──────────────────────────────────────────────
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+
+# ──────────────────────────────────────────────
+# Tests y cobertura
+# ──────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+*.coveragerc
+
+# ──────────────────────────────────────────────
+# Logs
+# ──────────────────────────────────────────────
+*.log
+logs/
+
+# ──────────────────────────────────────────────
+# Docker (no ignorar docker-compose.yml)
+# ──────────────────────────────────────────────
+.docker/
+
+# ──────────────────────────────────────────────
+# Node (si hay frontend en el mismo repo)
+# ──────────────────────────────────────────────
+node_modules/
+.npm
+.yarn/
