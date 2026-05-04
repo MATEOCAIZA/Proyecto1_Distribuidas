@@ -73,20 +73,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 4. Configurar las variables de entorno
-
-Copia el archivo de ejemplo y edítalo con tus valores:
-
-```bash
-# Windows
-copy .env.example .env
-
-# Linux / macOS
-cp .env.example .env
-```
-
-
-### 5. Levantar MongoDB y Redis con Docker
+### 4. Levantar MongoDB y Redis con Docker
 
 Desde la **raíz del proyecto** (donde está el `docker-compose.yml`):
 
