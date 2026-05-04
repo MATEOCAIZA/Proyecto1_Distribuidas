@@ -85,19 +85,6 @@ copy .env.example .env
 cp .env.example .env
 ```
 
-Abre `.env` y completa los valores:
-
-```env
-PORT=3001
-MONGO_URI=mongodb://localhost:27017/chatapp
-JWT_SECRET=cambia_esto_por_un_secreto_seguro
-REDIS_URL=redis://localhost:6379
-ADMIN_USER=admin
-ADMIN_PASS=Admin123
-MAX_FILE_SIZE=10485760
-```
-
-> ⚠️ **Importante:** Cambia `JWT_SECRET`, `ADMIN_USER` y `ADMIN_PASS` antes de cualquier despliegue.
 
 ### 5. Levantar MongoDB y Redis con Docker
 
