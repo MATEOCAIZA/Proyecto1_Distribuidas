@@ -2,6 +2,9 @@ import os
 from flask import Blueprint, request, jsonify, send_from_directory
 from werkzeug.utils import secure_filename
 from src.models.message import Message
+from src.models.room import Room
+from src.socket.events import room_users
+from src.middleware.rate_limiter import check_file_rate, FILE_WINDOW_SECONDS
 
 upload_bp = Blueprint("upload", __name__)
 
@@ -11,11 +14,30 @@ MAX_SIZE      = int(os.getenv("MAX_FILE_SIZE", 10485760))  # 10MB
 @upload_bp.route("/<room_id>", methods=["POST"])
 def upload_file(room_id):
     """Subida de archivos en salas multimedia."""
+
+    # ── P11: Verificar que la sala existe y es multimedia ──────────
+    room = Room.find_by_id(room_id)
+    if not room:
+        return jsonify({"error": "Sala no encontrada"}), 404
+    if room["type"] != "multimedia":
+        return jsonify({"error": "Esta sala es de tipo texto, no permite archivos"}), 403
+
     if "file" not in request.files:
         return jsonify({"error": "No se envió archivo"}), 400
 
     file     = request.files["file"]
     nickname = request.form.get("nickname", "")
+
+    # ── P12: Verificar que el usuario está conectado a la sala ────
+    users_in_room = room_users.get(room_id, {})
+    if nickname not in users_in_room.values():
+        return jsonify({"error": "No estás conectado a esta sala"}), 403
+
+    # ── P17: Rate limiting de archivos ────────────────────────────
+    if not check_file_rate(room_id, nickname):
+        return jsonify({
+            "error": f"Demasiados archivos. Espera {FILE_WINDOW_SECONDS}s."
+        }), 429
 
     # Validar tipo
     if file.mimetype not in ALLOWED_TYPES:

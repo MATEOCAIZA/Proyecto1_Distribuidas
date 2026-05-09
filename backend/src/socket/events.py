@@ -1,14 +1,52 @@
+import time
 from flask_socketio import emit, join_room, leave_room
 from src.models.room import Room
 from src.models.message import Message
 from src.config.redis_client import redis_client
-from src.workers.broadcast import BroadcastWorker
+from src.workers.broadcast import broadcast_task
+from src.middleware.rate_limiter import (
+    check_message_rate,
+    check_room_capacity,
+    MAX_USERS_PER_ROOM,
+    MESSAGE_WINDOW_SECONDS,
+)
 
 # Usuarios en memoria: { room_id: { socket_id: nickname } }
 room_users: dict[str, dict] = {}
 
+# Última actividad por sid (timestamp Unix)
+last_activity: dict[str, float] = {}
+
+# Timeout de inactividad (15 minutos)
+INACTIVITY_TIMEOUT = 900
+
+
+def _check_inactivity(socketio):
+    """
+    Tarea en background que revisa periódicamente (cada 60s)
+    si hay usuarios inactivos y los desconecta.
+    """
+    while True:
+        socketio.sleep(60)
+        now = time.time()
+        inactive_sids = [
+            sid for sid, ts in list(last_activity.items())
+            if now - ts > INACTIVITY_TIMEOUT
+        ]
+        for sid in inactive_sids:
+            socketio.emit(
+                "error",
+                {"message": "Desconectado por inactividad"},
+                to=sid
+            )
+            socketio.disconnect(sid)
+
+
 def register_events(socketio):
     """Registra todos los eventos WebSocket."""
+
+    # Iniciar tarea de verificación de inactividad (P13)
+    socketio.start_background_task(_check_inactivity, socketio)
 
     @socketio.on("join_room")
     def on_join(data):
@@ -41,19 +79,29 @@ def register_events(socketio):
             emit("error", {"message": "Nickname ya está en uso"})
             return
 
-        # 5. Registrar sesión en Redis (1 hora)
+        # 5. Verificar capacidad máxima de la sala (P17)
+        if not check_room_capacity(room_users, room_id):
+            emit("error", {
+                "message": f"Sala llena (máx {MAX_USERS_PER_ROOM} usuarios)"
+            })
+            return
+
+        # 6. Registrar sesión en Redis (1 hora)
         redis_client.setex(f"session:{client_ip}", 3600, sio_request.sid)
 
-        # 6. Unir al room de SocketIO
+        # 7. Unir al room de SocketIO
         join_room(room_id)
         room_users.setdefault(room_id, {})[sio_request.sid] = nickname
 
-        # 7. Guardar datos en sesión
+        # 8. Guardar datos en sesión
         sio_request.environ["room_id"]   = room_id
         sio_request.environ["nickname"]  = nickname
         sio_request.environ["client_ip"] = client_ip
 
-        # 8. Enviar historial y datos de sala
+        # 9. Registrar actividad (P13)
+        last_activity[sio_request.sid] = time.time()
+
+        # 10. Enviar historial y datos de sala
         history = Message.get_history(room_id)
         emit("room_joined", {
             "room":    {"roomId": room["roomId"],
@@ -62,12 +110,13 @@ def register_events(socketio):
             "history": history
         })
 
-        # 9. Notificar lista de usuarios (en hilo)
+        # 11. Notificar lista de usuarios (usando start_background_task — P15)
         user_list = list(room_users[room_id].values())
-        worker = BroadcastWorker(socketio, room_id, "user_list", {"users": user_list})
-        worker.start()
+        socketio.start_background_task(
+            broadcast_task, socketio, room_id, "user_list", {"users": user_list}
+        )
 
-        # 10. Notificar que alguien entró
+        # 12. Notificar que alguien entró
         socketio.emit("user_joined", {"nickname": nickname}, room=room_id)
 
 
@@ -81,6 +130,16 @@ def register_events(socketio):
         if not room_id or not content:
             return
 
+        # Rate limiting de mensajes (P17)
+        if not check_message_rate(room_id, nickname):
+            emit("error", {
+                "message": f"Demasiados mensajes. Máx {MESSAGE_WINDOW_SECONDS}s entre ráfagas."
+            })
+            return
+
+        # Actualizar actividad (P13)
+        last_activity[sio_request.sid] = time.time()
+
         # Guardar en base de datos
         message = Message.create(
             room_id  = room_id,
@@ -89,9 +148,35 @@ def register_events(socketio):
             msg_type = "text"
         )
 
-        # Broadcast en hilo separado
-        worker = BroadcastWorker(socketio, room_id, "new_message", message)
-        worker.start()
+        # Broadcast usando start_background_task (P15)
+        socketio.start_background_task(
+            broadcast_task, socketio, room_id, "new_message", message
+        )
+
+
+    @socketio.on("load_more_messages")
+    def on_load_more(data):
+        """
+        Paginación del historial — el frontend envía el timestamp
+        del mensaje más antiguo que tiene para cargar los anteriores.
+        (P14)
+        """
+        from flask_socketio import request as sio_request
+        room_id = data.get("roomId", "")
+        before  = data.get("before", None)
+
+        if not room_id:
+            return
+
+        # Actualizar actividad (P13)
+        if sio_request.sid in last_activity:
+            last_activity[sio_request.sid] = time.time()
+
+        messages = Message.get_history(room_id, limit=50, before=before)
+        emit("more_messages", {
+            "messages": messages,
+            "hasMore":  len(messages) == 50
+        })
 
 
     @socketio.on("disconnect")
@@ -111,6 +196,9 @@ def register_events(socketio):
         # Limpiar sesión Redis
         if client_ip:
             redis_client.delete(f"session:{client_ip}")
+
+        # Limpiar registro de actividad (P13)
+        last_activity.pop(sio_request.sid, None)
 
         # Notificar salida
         socketio.emit("user_left", {"nickname": nickname}, room=room_id)
