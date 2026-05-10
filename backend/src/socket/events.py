@@ -5,7 +5,7 @@ from src.models.room import Room
 from src.models.message import Message
 from src.config.redis_client import redis_client
 
-from src.workers.broadcast import broadcast_task
+from src.workers.broadcast import broadcast_in_thread
 
 from src.middleware.rate_limiter import (
     check_message_rate,
@@ -123,8 +123,8 @@ def register_events(socketio):
             msg_type = "text"
         )
 
-        emit("new_message",message,room=room_id)
-        #worker.start()
+        # Difundir a la sala en un hilo separado (no bloquea el handler)
+        broadcast_in_thread(socketio, room_id, "new_message", message)
 
     @socketio.on("send_file_message")
     def on_file_message(data):
@@ -157,8 +157,8 @@ def register_events(socketio):
             file_type = type
         )
 
-        # Broadcast usando start_background_task (P15)
-        emit('new_message',message,to=room_id)
+        # Broadcast a la sala en un hilo separado (P15)
+        broadcast_in_thread(socketio, room_id, "new_message", message)
 
     @socketio.on("load_more_messages")
     def on_load_more(data):
