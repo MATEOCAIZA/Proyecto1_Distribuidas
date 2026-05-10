@@ -49,6 +49,20 @@ def register_events(socketio):
 
     socketio.start_background_task(_check_inactivity,socketio)
 
+
+    @socketio.on("connect")
+    def on_connect():
+        """
+        Acepta la conexión y registra el SID.
+        Este handler es NECESARIO para que Flask-SocketIO
+        complete el handshake antes de procesar otros eventos.
+        """
+        sid = request.sid
+        if not sid:
+            return False  # Rechazar conexión si no tiene SID
+        last_activity[sid] = time.time()
+        print(f"[connect] Client connected: {sid}")
+
     @socketio.on("join_room")
     def on_join(data):
         room_id   = data.get("roomId", "")
@@ -67,11 +81,11 @@ def register_events(socketio):
             emit("error", {"message": "PIN incorrecto"})
             return
 
-        # 3. Sesión única por IP
-        existing = redis_client.get(f"session:{client_ip}")
-        if existing and existing != request.sid:
-            emit("error", {"message": "Ya tienes una sesión activa"})
-            return
+        # 3. Sesión única por IP (Desactivado para pruebas)
+        # existing = redis_client.get(f"session:{client_ip}")
+        # if existing and existing != request.sid:
+        #     emit("error", {"message": "Ya tienes una sesión activa"})
+        #     return
 
         # 4. Nickname único en sala
         users_in_room = room_users.get(room_id, {})
@@ -80,7 +94,7 @@ def register_events(socketio):
             return
 
         # 5. Registrar sesión en Redis (1 hora)
-        redis_client.setex(f"session:{client_ip}", 3600, request.sid)
+        #redis_client.setex(f"session:{client_ip}", 3600, request.sid)
 
         # 6. Unir al room de SocketIO
         join_room(room_id)
