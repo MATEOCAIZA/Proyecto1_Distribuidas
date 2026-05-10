@@ -24,10 +24,22 @@ class Message:
         return message
 
     @staticmethod
-    def get_history(room_id: str, limit: int = 50) -> list:
-        """Obtiene los últimos mensajes de una sala."""
+    def get_history(room_id: str, limit: int = 50, before: str = None) -> list:
+        """
+        Obtiene los últimos mensajes de una sala con paginación por cursor.
+
+        Args:
+            room_id: ID de la sala.
+            limit: Cantidad máxima de mensajes a retornar.
+            before: Timestamp ISO — retorna solo mensajes anteriores a este valor.
+        """
+        query = {"roomId": room_id}
+        if before:
+            query["timestamp"] = {"$lt": before}
+
         cursor = messages_collection.find(
-            {"roomId": room_id},
-            {"_id": 0}
-        ).sort("timestamp", 1).limit(limit)
-        return list(cursor)
+            query, {"_id": 0}
+        ).sort("timestamp", -1).limit(limit)
+
+        # Invertir para mantener orden cronológico ascendente
+        return list(reversed(list(cursor)))
