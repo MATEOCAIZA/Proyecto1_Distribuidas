@@ -68,7 +68,7 @@ def register_events(socketio):
 
         # 3. Sesión única por IP
         existing = redis_client.get(f"session:{client_ip}")
-        from flask_socketio import request as sio_request
+        from flask import request as sio_request
         if existing and existing != sio_request.sid:
             emit("error", {"message": "Ya tienes una sesión activa"})
             return
@@ -112,17 +112,18 @@ def register_events(socketio):
 
         # 11. Notificar lista de usuarios (usando start_background_task — P15)
         user_list = list(room_users[room_id].values())
-        socketio.start_background_task(
-            broadcast_task, socketio, room_id, "user_list", {"users": user_list}
-        )
+        # socketio.start_background_task(
+        #     broadcast_task, socketio, room_id, "user_list", {"users": user_list}
+        # )
+        socketio.emit("user_list", {"users": user_list}, room=room_id)
 
         # 12. Notificar que alguien entró
-        socketio.emit("user_joined", {"nickname": nickname}, room=room_id)
+        socketio.emit("user_joined", {"nickname": nickname}, room=room_id, include_self=False)
 
 
     @socketio.on("send_message")
     def on_message(data):
-        from flask_socketio import request as sio_request
+        from flask import request as sio_request
         room_id  = sio_request.environ.get("room_id")
         nickname = sio_request.environ.get("nickname")
         content  = data.get("content", "").strip()
@@ -149,9 +150,43 @@ def register_events(socketio):
         )
 
         # Broadcast usando start_background_task (P15)
-        socketio.start_background_task(
-            broadcast_task, socketio, room_id, "new_message", message
+        emit('new_message',message,to=room_id)
+
+    @socketio.on("send_file_message")
+    def on_file_message(data):
+        from flask import request as sio_request
+        room_id  = sio_request.environ.get("room_id")
+        nickname = sio_request.environ.get("nickname")
+        path  = data.get("path", "").strip()
+        type = data.get("type","").strip()
+        name = data.get("file_name", "").strip()
+
+        if not room_id or not path or not type or not name:
+            return
+
+        # Rate limiting de mensajes (P17)
+        if not check_message_rate(room_id, nickname):
+            emit("error", {
+                "message": f"Demasiados mensajes. Máx {MESSAGE_WINDOW_SECONDS}s entre ráfagas."
+            })
+            return
+
+        # Actualizar actividad (P13)
+        last_activity[sio_request.sid] = time.time()
+
+        # Guardar en base de datos
+        message = Message.create(
+            room_id  = room_id,
+            nickname = nickname,
+            content  = None,
+            msg_type = "file",
+            file_name = name,
+            file_path = path,
+            file_type = type
         )
+
+        # Broadcast usando start_background_task (P15)
+        emit('new_message',message,to=room_id)
 
 
     @socketio.on("load_more_messages")
@@ -161,7 +196,7 @@ def register_events(socketio):
         del mensaje más antiguo que tiene para cargar los anteriores.
         (P14)
         """
-        from flask_socketio import request as sio_request
+        from flask import request as sio_request
         room_id = data.get("roomId", "")
         before  = data.get("before", None)
 
@@ -181,7 +216,7 @@ def register_events(socketio):
 
     @socketio.on("disconnect")
     def on_disconnect():
-        from flask_socketio import request as sio_request
+        from flask import request as sio_request
         room_id   = sio_request.environ.get("room_id")
         nickname  = sio_request.environ.get("nickname")
         client_ip = sio_request.environ.get("client_ip")
@@ -209,6 +244,6 @@ def register_events(socketio):
 
 
 def _get_ip():
-    from flask_socketio import request as sio_request
+    from flask import request as sio_request
     return (sio_request.environ.get("HTTP_X_FORWARDED_FOR") or
             sio_request.environ.get("REMOTE_ADDR", "unknown"))

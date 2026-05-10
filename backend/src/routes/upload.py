@@ -29,9 +29,10 @@ def upload_file(room_id):
     nickname = request.form.get("nickname", "")
 
     # ── P12: Verificar que el usuario está conectado a la sala ────
+    # --- Desactivado por pruebas #
     users_in_room = room_users.get(room_id, {})
     if nickname not in users_in_room.values():
-        return jsonify({"error": "No estás conectado a esta sala"}), 403
+       return jsonify({"error": "No estás conectado a esta sala"}), 403
 
     # ── P17: Rate limiting de archivos ────────────────────────────
     if not check_file_rate(room_id, nickname):

@@ -25,6 +25,19 @@ def socket_client(app_and_socket, client):
     socket_test_client.disconnect()
 
 @pytest.fixture(scope="function")
+def socket_client_2(app_and_socket):
+    """Second socket client to test multi-client interactions."""
+    app, socketio = app_and_socket
+    with app.test_client() as flask_client_2:
+        socket_test_client_2 = socketio.test_client(
+             app,
+               flask_test_client=flask_client_2,
+               headers={"X-Forwarded-For": "10.0.0.2"} #Simula otra IP
+               )
+        yield socket_test_client_2
+        socket_test_client_2.disconnect()
+
+@pytest.fixture(scope="function")
 def auth_token(client):
         loginData = {
   "username": "admin",
