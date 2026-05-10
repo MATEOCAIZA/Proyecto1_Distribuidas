@@ -1,4 +1,5 @@
 from flask_socketio import emit, join_room, leave_room
+from flask import request
 from src.models.room import Room
 from src.models.message import Message
 from src.config.redis_client import redis_client
@@ -12,9 +13,9 @@ def register_events(socketio):
 
     @socketio.on("join_room")
     def on_join(data):
-        room_id  = data.get("roomId", "")
-        pin      = data.get("pin", "")
-        nickname = data.get("nickname", "").strip()
+        room_id   = data.get("roomId", "")
+        pin       = data.get("pin", "")
+        nickname  = data.get("nickname", "").strip()
         client_ip = _get_ip()
 
         # 1. Buscar sala
@@ -30,8 +31,7 @@ def register_events(socketio):
 
         # 3. Sesión única por IP
         existing = redis_client.get(f"session:{client_ip}")
-        from flask_socketio import request as sio_request
-        if existing and existing != sio_request.sid:
+        if existing and existing != request.sid:
             emit("error", {"message": "Ya tienes una sesión activa"})
             return
 
@@ -42,16 +42,16 @@ def register_events(socketio):
             return
 
         # 5. Registrar sesión en Redis (1 hora)
-        redis_client.setex(f"session:{client_ip}", 3600, sio_request.sid)
+        redis_client.setex(f"session:{client_ip}", 3600, request.sid)
 
         # 6. Unir al room de SocketIO
         join_room(room_id)
-        room_users.setdefault(room_id, {})[sio_request.sid] = nickname
+        room_users.setdefault(room_id, {})[request.sid] = nickname
 
         # 7. Guardar datos en sesión
-        sio_request.environ["room_id"]   = room_id
-        sio_request.environ["nickname"]  = nickname
-        sio_request.environ["client_ip"] = client_ip
+        request.environ["room_id"]   = room_id
+        request.environ["nickname"]  = nickname
+        request.environ["client_ip"] = client_ip
 
         # 8. Enviar historial y datos de sala
         history = Message.get_history(room_id)
@@ -62,7 +62,7 @@ def register_events(socketio):
             "history": history
         })
 
-        # 9. Notificar lista de usuarios (en hilo)
+        # 9. Notificar lista de usuarios
         user_list = list(room_users[room_id].values())
         worker = BroadcastWorker(socketio, room_id, "user_list", {"users": user_list})
         worker.start()
@@ -73,15 +73,13 @@ def register_events(socketio):
 
     @socketio.on("send_message")
     def on_message(data):
-        from flask_socketio import request as sio_request
-        room_id  = sio_request.environ.get("room_id")
-        nickname = sio_request.environ.get("nickname")
+        room_id  = request.environ.get("room_id")
+        nickname = request.environ.get("nickname")
         content  = data.get("content", "").strip()
 
         if not room_id or not content:
             return
 
-        # Guardar en base de datos
         message = Message.create(
             room_id  = room_id,
             nickname = nickname,
@@ -89,30 +87,25 @@ def register_events(socketio):
             msg_type = "text"
         )
 
-        # Broadcast en hilo separado
         worker = BroadcastWorker(socketio, room_id, "new_message", message)
         worker.start()
 
 
     @socketio.on("disconnect")
     def on_disconnect():
-        from flask_socketio import request as sio_request
-        room_id   = sio_request.environ.get("room_id")
-        nickname  = sio_request.environ.get("nickname")
-        client_ip = sio_request.environ.get("client_ip")
+        room_id   = request.environ.get("room_id")
+        nickname  = request.environ.get("nickname")
+        client_ip = request.environ.get("client_ip")
 
         if not room_id:
             return
 
-        # Limpiar usuario
         if room_id in room_users:
-            room_users[room_id].pop(sio_request.sid, None)
+            room_users[room_id].pop(request.sid, None)
 
-        # Limpiar sesión Redis
         if client_ip:
             redis_client.delete(f"session:{client_ip}")
 
-        # Notificar salida
         socketio.emit("user_left", {"nickname": nickname}, room=room_id)
         user_list = list(room_users.get(room_id, {}).values())
         socketio.emit("user_list", {"users": user_list}, room=room_id)
@@ -121,6 +114,5 @@ def register_events(socketio):
 
 
 def _get_ip():
-    from flask_socketio import request as sio_request
-    return (sio_request.environ.get("HTTP_X_FORWARDED_FOR") or
-            sio_request.environ.get("REMOTE_ADDR", "unknown"))
+    return (request.environ.get("HTTP_X_FORWARDED_FOR") or
+            request.environ.get("REMOTE_ADDR", "unknown"))
