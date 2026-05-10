@@ -202,11 +202,12 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onUnmounted, nextTick } from 'vue'
+import { ref, computed, onMounted, onUnmounted, watch, nextTick } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { useChatStore } from '@/stores/chat'
 import { useRoomStore } from '@/stores/room'
 import { uploadService } from '@/services/api'
+import socketService from '@/services/socket'
 
 const router = useRouter()
 const route = useRoute()
@@ -223,50 +224,84 @@ const error = ref(null)
 const typingUser = ref(null)
 const isOtherUserTyping = ref(false)
 
-const currentRoomData = computed(() => roomStore.currentRoom || {})
+const currentRoomData = computed(() => {
+  return roomStore.currentRoom || {}
+})
 
 onMounted(async () => {
+  // Detectar si es móvil
   isMobile.value = window.innerWidth < 768
   window.addEventListener('resize', handleResize)
 
   const roomId = route.params.id
   const nickname = route.query.nickname || sessionStorage.getItem('current_nickname')
-  const pin = sessionStorage.getItem('room_pin')
 
-  if (!nickname || !roomId || !pin) {
+  if (!nickname || !roomId) {
     router.push({ name: 'JoinRoom' })
     return
   }
 
-  chatStore.initializeSocket()
+  // Obtener datos de la sala
+  const rooms = await roomStore.fetchRooms()
+  const room = roomStore.rooms.find(r => r._id === roomId)
+
+  if (room) {
+    roomStore.setCurrentRoom(room)
+  }
+
+  // Conectar a la sala
+  const pin = route.query.pin || sessionStorage.getItem('room_pin')
+  if (!pin) {
+    router.push({ name: 'JoinRoom' })
+    return
+  }
+
   chatStore.joinRoom(roomId, pin, nickname)
 
-  roomStore.fetchRooms().then(() => {
-    const room = roomStore.rooms.find(
-      r => r._id === roomId || r.id === roomId || r.roomId === roomId
-    )
-    if (room) roomStore.setCurrentRoom(room)
+  // Auto-scroll a los últimos mensajes
+  watch(
+    () => chatStore.messages.length,
+    () => {
+      nextTick(() => {
+        if (messagesContainer.value) {
+          messagesContainer.value.scrollTop = messagesContainer.value.scrollHeight
+        }
+      })
+    }
+  )
+
+  // Escuchar eventos de escritura
+  socketService.on('user_typing', (data) => {
+    if (data.nickname !== chatStore.currentUser?.nickname) {
+      typingUser.value = data.nickname
+      isOtherUserTyping.value = true
+      setTimeout(() => {
+        isOtherUserTyping.value = false
+      }, 3000)
+    }
   })
 })
 
 onUnmounted(() => {
   window.removeEventListener('resize', handleResize)
+  chatStore.leaveRoom()
 })
 
 function handleResize() {
   isMobile.value = window.innerWidth < 768
-  if (!isMobile.value) showUserList.value = true
+  if (!isMobile.value) {
+    showUserList.value = true
+  }
 }
 
 function toggleUserList() {
-  if (isMobile.value) showUserList.value = !showUserList.value
+  if (isMobile.value) {
+    showUserList.value = !showUserList.value
+  }
 }
 
 function handleLeaveRoom() {
   if (confirm('¿Estás seguro de que deseas salir de la sala?')) {
-    sessionStorage.removeItem('room_pin')
-    sessionStorage.removeItem('current_nickname')
-    sessionStorage.removeItem('current_room_id')
     chatStore.leaveRoom()
     router.push({ name: 'Home' })
   }
@@ -274,9 +309,12 @@ function handleLeaveRoom() {
 
 function sendMessage() {
   if (!newMessage.value.trim()) return
+
   error.value = null
   chatStore.sendMessage(newMessage.value)
   newMessage.value = ''
+
+  // Scroll al último mensaje
   nextTick(() => {
     if (messagesContainer.value) {
       messagesContainer.value.scrollTop = messagesContainer.value.scrollHeight
@@ -292,7 +330,8 @@ async function handleFileSelect(event) {
   const file = event.target.files?.[0]
   if (!file) return
 
-  const maxSize = 10 * 1024 * 1024
+  // Validar tipo y tamaño
+  const maxSize = 10 * 1024 * 1024 // 10MB
   const allowedTypes = ['image/jpeg', 'image/png', 'image/gif', 'application/pdf']
 
   if (!allowedTypes.includes(file.type)) {
@@ -314,11 +353,15 @@ async function handleFileSelect(event) {
       file,
       chatStore.currentUser?.nickname
     )
+
+    // Agregar mensaje con archivo
     chatStore.addFileMessage({
       name: file.name,
       size: file.size,
       url: uploadService.getFileUrl(result.filename)
     })
+
+    // Scroll al último mensaje
     nextTick(() => {
       if (messagesContainer.value) {
         messagesContainer.value.scrollTop = messagesContainer.value.scrollHeight
@@ -326,15 +369,18 @@ async function handleFileSelect(event) {
     })
   } catch (err) {
     error.value = err.response?.data?.error || 'Error al subir el archivo'
+    console.error('Upload error:', err)
   } finally {
     loading.value = false
+    // Reset input
     event.target.value = ''
   }
 }
 
 function formatTime(timestamp) {
   if (!timestamp) return ''
-  return new Date(timestamp).toLocaleTimeString('es-ES', {
+  const date = new Date(timestamp)
+  return date.toLocaleTimeString('es-ES', {
     hour: '2-digit',
     minute: '2-digit'
   })

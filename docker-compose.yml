@@ -1,0 +1,36 @@
+version: "3.9"
+
+services:
+
+  mongo:
+    image: mongo:7
+    container_name: chatapp_mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"       # accesible desde el host en localhost:27017
+    volumes:
+      - mongo_data:/data/db  # persistencia de datos
+    environment:
+      MONGO_INITDB_DATABASE: chatapp
+    networks:
+      - chatapp_net
+
+  redis:
+    image: redis:7-alpine
+    container_name: chatapp_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"          # accesible desde el host en localhost:6379
+    volumes:
+      - redis_data:/data     # persistencia de datos (AOF/RDB)
+    command: redis-server --appendonly yes   # habilita persistencia AOF
+    networks:
+      - chatapp_net
+
+volumes:
+  mongo_data:
+  redis_data:
+
+networks:
+  chatapp_net:
+    driver: bridge
