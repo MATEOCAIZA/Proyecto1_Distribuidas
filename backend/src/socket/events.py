@@ -5,7 +5,7 @@ from src.models.room import Room
 from src.models.message import Message
 from src.config.redis_client import redis_client
 
-from src.workers.broadcast import broadcast_in_thread
+from src.workers.broadcast import broadcast_in_thread, broadcast_with_db
 
 from src.middleware.rate_limiter import (
     check_message_rate,
@@ -116,15 +116,20 @@ def register_events(socketio):
         if not room_id or not content:
             return
 
-        message = Message.create(
+        # La escritura a MongoDB Y el emit se hacen en el pool de hilos.
+        # El handler retorna de inmediato — sin esperar I/O alguno.
+        broadcast_with_db(
+            socketio,
             room_id  = room_id,
-            nickname = nickname,
-            content  = content,
-            msg_type = "text"
+            event    = "new_message",
+            create_fn = Message.create,
+            create_kwargs = dict(
+                room_id  = room_id,
+                nickname = nickname,
+                content  = content,
+                msg_type = "text"
+            )
         )
-
-        # Difundir a la sala en un hilo separado (no bloquea el handler)
-        broadcast_in_thread(socketio, room_id, "new_message", message)
 
     @socketio.on("send_file_message")
     def on_file_message(data):
@@ -145,20 +150,22 @@ def register_events(socketio):
             })
             return
 
-
-        # Guardar en base de datos
-        message = Message.create(
+        # BD + emit en el pool de hilos (P15) — handler retorna de inmediato
+        broadcast_with_db(
+            socketio,
             room_id  = room_id,
-            nickname = nickname,
-            content  = None,
-            msg_type = "file",
-            file_name = name,
-            file_path = path,
-            file_type = type
+            event    = "new_message",
+            create_fn = Message.create,
+            create_kwargs = dict(
+                room_id   = room_id,
+                nickname  = nickname,
+                content   = None,
+                msg_type  = "file",
+                file_name = name,
+                file_path = path,
+                file_type = type
+            )
         )
-
-        # Broadcast a la sala en un hilo separado (P15)
-        broadcast_in_thread(socketio, room_id, "new_message", message)
 
     @socketio.on("load_more_messages")
     def on_load_more(data):
