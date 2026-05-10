@@ -24,3 +24,28 @@
 ```
 
 ## Flujo 2 - Envío de mensaje de texto
+
+```mermaid
+sequenceDiagram
+    participant C as Cliente
+    participant S as Servidor
+    participant O as Otros clientes
+
+    C->>S: [send_message]
+    S-->>S: Guarda mensaje BD
+    S->>C: [new_message]
+    S->>O: [new_message]
+```
+
+## Flujo 3 - Desconexión
+```mermaid
+sequenceDiagram
+    participant C as Cliente
+    participant S as Servidor
+    participant O as Otros clientes
+
+    C->>S: [disconnect]
+    S->>S: Quita de la lista
+    S->>O: [user_left]
+    S->>O: [user_list]
+```
