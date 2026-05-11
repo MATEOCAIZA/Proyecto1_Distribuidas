@@ -6,12 +6,11 @@ from flask import Flask
 from flask_socketio import SocketIO
 from flask_cors import CORS
 from dotenv import load_dotenv
-
+from src.routes.health import health_bp
 from src.routes.auth   import auth_bp
 from src.routes.rooms  import rooms_bp
 from src.routes.upload import upload_bp
 from src.socket.events import register_events
-
 load_dotenv()
 
 def create_app():
@@ -25,6 +24,7 @@ def create_app():
     app.register_blueprint(auth_bp,   url_prefix="/api/auth")
     app.register_blueprint(rooms_bp,  url_prefix="/api/rooms")
     app.register_blueprint(upload_bp, url_prefix="/api/upload")
+    app.register_blueprint(health_bp, url_prefix="/api")
 
     # Inicializar SocketIO con threading
     socketio = SocketIO(
@@ -46,5 +46,5 @@ if __name__ == "__main__":
         app,
         host="0.0.0.0",
         port=int(os.getenv("PORT", 3001)),
-        debug=True
+        debug=False
     )
