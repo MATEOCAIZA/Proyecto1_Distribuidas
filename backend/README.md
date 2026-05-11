@@ -1,4 +1,4 @@
-# Flujos de Comunicación
+# Diagramas de Secuencia
 
 
 ## Flujo 1 - Conexión al servidor
@@ -7,6 +7,13 @@
     participant C as Cliente
     participant S as Servidor
     participant O as Otros clientes
+
+    C->>S: POST(verify_pin)
+    alt PIN válido
+        S-->>C:Datos_sala
+    else PIN inválido
+        S-->>C:Acceso no autorizado
+    end
 
     C->>S: [join_room]
     
@@ -37,7 +44,29 @@ sequenceDiagram
     S->>O: [new_message]
 ```
 
-## Flujo 3 - Desconexión
+## Flujo 3 - Enviar mensaje multimedia 
+```mermaid
+sequenceDiagram
+    participant C as Cliente
+    participant S as Servidor
+    participant O as Otros clientes
+
+    C->>S: POST(upload_file)
+
+    S->>S: Valida envío
+
+    alt Si envio válido
+        S-->>S: Guarda en BD
+        S-->>C: Datos_archivo_bd
+        C->>S: [send_file_message]
+        S-->>C: [new_message]
+        S-->>O: [new_message]
+    else Si envio inválido
+        S-->>C: [error]
+    end
+```
+
+## Flujo 4 - Desconexión
 ```mermaid
 sequenceDiagram
     participant C as Cliente
@@ -49,3 +78,4 @@ sequenceDiagram
     S->>O: [user_left]
     S->>O: [user_list]
 ```
+

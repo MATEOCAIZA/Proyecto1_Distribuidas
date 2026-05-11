@@ -63,6 +63,8 @@ class TestSendMessage:
 
         # client2 debe recibir new_message
         received_2 = socket_client_2.get_received()
+        print("Eventos recibidos:")
+        print(received_2)
         new_msgs = [r for r in received_2 if r["name"] == "new_message"]
         assert len(new_msgs) >= 1
         msg_data = new_msgs[0]["args"][0]

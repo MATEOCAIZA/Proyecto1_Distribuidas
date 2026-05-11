@@ -1,0 +1,951 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1778467654225,200,Verificar sala y pin,200,OK,Usuarios de chat 1-1,text,true,,234,249,2,2,http://localhost:3001/api/rooms/95A55712/verify,196,0,14
+1778467654450,173,Verificar sala y pin,200,OK,Usuarios de chat 1-2,text,true,,234,249,3,3,http://localhost:3001/api/rooms/95A55712/verify,173,0,1
+1778467655171,174,Verificar sala y pin,200,OK,Usuarios de chat 1-3,text,true,,234,250,4,4,http://localhost:3001/api/rooms/95A55712/verify,174,0,0
+1778467655617,2,HTTP Request,200,OK,Usuarios de chat 1-1,text,true,,300,179,5,5,http://localhost:3001/socket.io/?EIO=4&transport=polling,2,0,0
+1778467655883,1,HTTP Request,200,OK,Usuarios de chat 1-2,text,true,,300,179,5,5,http://localhost:3001/socket.io/?EIO=4&transport=polling,1,0,0
+1778467656290,1,HTTP Request,200,OK,Usuarios de chat 1-3,text,true,,300,179,6,6,http://localhost:3001/socket.io/?EIO=4&transport=polling,1,0,0
+1778467656291,175,Verificar sala y pin,200,OK,Usuarios de chat 1-4,text,true,,234,250,7,7,http://localhost:3001/api/rooms/95A55712/verify,175,0,0
+1778467656652,2,Debug Sampler,200,OK,Usuarios de chat 1-1,text,true,,19631,0,7,7,null,0,0,0
+1778467656658,1,Debug Sampler,200,OK,Usuarios de chat 1-2,text,true,,19630,0,7,7,null,0,0,0
+1778467656692,176,Verificar sala y pin,200,OK,Usuarios de chat 1-5,text,true,,234,250,7,7,http://localhost:3001/api/rooms/95A55712/verify,176,0,1
+1778467656857,184,Verificar sala y pin,200,OK,Usuarios de chat 1-6,text,true,,234,250,8,8,http://localhost:3001/api/rooms/95A55712/verify,184,0,1
+1778467657369,2,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-1,,true,,129,243,8,8,null,0,0,2
+1778467657554,1,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-2,,true,,129,243,9,9,null,0,0,1
+1778467657615,0,Debug Sampler,200,OK,Usuarios de chat 1-3,text,true,,19631,0,9,9,null,0,0,0
+1778467657565,176,Verificar sala y pin,200,OK,Usuarios de chat 1-7,text,true,,234,249,9,9,http://localhost:3001/api/rooms/95A55712/verify,176,0,0
+1778467657832,1,HTTP Request,200,OK,Usuarios de chat 1-4,text,true,,300,179,9,9,http://localhost:3001/socket.io/?EIO=4&transport=polling,1,0,0
+1778467658168,179,Verificar sala y pin,200,OK,Usuarios de chat 1-9,text,true,,234,250,10,10,http://localhost:3001/api/rooms/95A55712/verify,179,0,1
+1778467658304,100,HTTP Request,200,OK,Usuarios de chat 1-5,text,true,,300,177,10,10,http://localhost:3001/socket.io/?EIO=4&transport=polling,100,0,0
+1778467658296,109,HTTP Request,200,OK,Usuarios de chat 1-6,text,true,,300,179,10,10,http://localhost:3001/socket.io/?EIO=4&transport=polling,108,0,0
+1778467658173,232,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-3,,true,,129,243,10,10,null,0,0,232
+1778467658507,1,Web socket handshake,200,OK,Usuarios de chat 1-2,,true,,0,12,11,11,null,0,0,0
+1778467658566,0,Web socket handshake,200,OK,Usuarios de chat 1-1,,true,,0,12,11,11,null,0,0,0
+1778467658327,250,Verificar sala y pin,200,OK,Usuarios de chat 1-8,text,true,,234,250,11,11,http://localhost:3001/api/rooms/95A55712/verify,250,0,1
+1778467658594,1,HTTP Request,200,OK,Usuarios de chat 1-7,text,true,,300,178,11,11,http://localhost:3001/socket.io/?EIO=4&transport=polling,1,0,0
+1778467659000,0,Debug Sampler,200,OK,Usuarios de chat 1-6,text,true,,19631,0,12,12,null,0,0,0
+1778467659115,0,websocket accept handshake,200,OK,Usuarios de chat 1-2,text,true,,8,0,12,12,null,0,0,0
+1778467659151,0,Debug Sampler,200,OK,Usuarios de chat 1-4,text,true,,19631,0,12,12,null,0,0,0
+1778467659336,0,Debug Sampler,200,OK,Usuarios de chat 1-7,text,true,,19631,0,12,12,null,0,0,0
+1778467659416,0,Web socket handshake,200,OK,Usuarios de chat 1-3,,true,,0,12,12,12,null,0,0,0
+1778467659292,177,Verificar sala y pin,200,OK,Usuarios de chat 1-10,text,true,,234,250,13,13,http://localhost:3001/api/rooms/95A55712/verify,177,0,1
+1778467659489,1,Debug Sampler,200,OK,Usuarios de chat 1-5,text,true,,19631,0,13,13,null,0,0,0
+1778467659515,182,Verificar sala y pin,200,OK,Usuarios de chat 1-11,text,true,,234,251,13,13,http://localhost:3001/api/rooms/95A55712/verify,182,0,1
+1778467659551,146,HTTP Request,200,OK,Usuarios de chat 1-9,text,true,,300,178,13,13,http://localhost:3001/socket.io/?EIO=4&transport=polling,146,0,0
+1778467659807,0,websocket accept handshake,200,OK,Usuarios de chat 1-1,text,true,,8,0,13,13,null,0,0,0
+1778467659901,2,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-7,,true,,129,243,13,13,null,0,0,2
+1778467660067,0,websocket accept handshake,200,OK,Usuarios de chat 1-3,text,true,,8,0,14,14,null,0,0,0
+1778467660069,1,HTTP Request,200,OK,Usuarios de chat 1-8,text,true,,300,179,14,14,http://localhost:3001/socket.io/?EIO=4&transport=polling,1,0,0
+1778467660130,2,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-6,,true,,129,242,14,14,null,0,0,2
+1778467660281,1,Debug Sampler,200,OK,Usuarios de chat 1-9,text,true,,19631,0,14,14,null,0,0,0
+1778467660319,0,websocket confirm handshake,200,OK,Usuarios de chat 1-2,,true,,0,7,14,14,null,0,0,0
+1778467660325,1,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-5,,true,,129,243,14,14,null,0,0,1
+1778467660415,180,Verificar sala y pin,200,OK,Usuarios de chat 1-12,text,true,,234,251,15,15,http://localhost:3001/api/rooms/95A55712/verify,180,0,1
+1778467660566,86,HTTP Request,200,OK,Usuarios de chat 1-10,text,true,,300,180,15,15,http://localhost:3001/socket.io/?EIO=4&transport=polling,86,0,0
+1778467660444,208,HTTP Request,200,OK,Usuarios de chat 1-11,text,true,,300,180,15,15,http://localhost:3001/socket.io/?EIO=4&transport=polling,208,0,0
+1778467660570,83,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-4,,true,,129,243,15,15,null,0,0,83
+1778467660455,369,Verificar sala y pin,200,OK,Usuarios de chat 1-14,text,true,,234,251,15,15,http://localhost:3001/api/rooms/95A55712/verify,369,0,1
+1778467660837,0,Web socket handshake,200,OK,Usuarios de chat 1-5,,true,,0,12,15,15,null,0,0,0
+1778467660867,0,Debug Sampler,200,OK,Usuarios de chat 1-8,text,true,,19631,0,15,15,null,0,0,0
+1778467660974,0,Ask for connection,200,OK,Usuarios de chat 1-2,,true,,0,8,16,16,null,0,0,0
+1778467660854,173,Verificar sala y pin,200,OK,Usuarios de chat 1-13,text,true,,234,250,16,16,http://localhost:3001/api/rooms/95A55712/verify,173,0,1
+1778467661104,0,websocket confirm handshake,200,OK,Usuarios de chat 1-3,,true,,0,7,16,16,null,0,0,0
+1778467661142,0,Web socket handshake,200,OK,Usuarios de chat 1-7,,true,,0,12,16,16,null,0,0,0
+1778467661154,0,Web socket handshake,200,OK,Usuarios de chat 1-6,,true,,0,12,16,16,null,0,0,0
+1778467661226,0,websocket confirm handshake,200,OK,Usuarios de chat 1-1,,true,,0,7,16,16,null,0,0,0
+1778467661300,0,Web socket handshake,200,OK,Usuarios de chat 1-4,,true,,0,12,16,16,null,0,0,0
+1778467661398,1,Debug Sampler,200,OK,Usuarios de chat 1-10,text,true,,19632,0,16,16,null,0,0,0
+1778467661515,0,websocket accept handshake,200,OK,Usuarios de chat 1-5,text,true,,8,0,17,17,null,0,0,0
+1778467661528,2,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-9,,true,,129,242,17,17,null,0,0,2
+1778467661570,1,HTTP Request,200,OK,Usuarios de chat 1-12,text,true,,300,179,17,17,http://localhost:3001/socket.io/?EIO=4&transport=polling,1,0,0
+1778467661615,0,Ask for connection,200,OK,Usuarios de chat 1-3,,true,,0,8,17,17,null,0,0,0
+1778467661745,0,Extra reader for noop,200,OK,Usuarios de chat 1-2,text,true,,3,0,17,17,null,0,0,0
+1778467661613,176,Verificar sala y pin,200,OK,Usuarios de chat 1-15,text,true,,234,251,17,17,http://localhost:3001/api/rooms/95A55712/verify,176,0,1
+1778467661720,126,HTTP Request,200,OK,Usuarios de chat 1-13,text,true,,300,178,17,17,http://localhost:3001/socket.io/?EIO=4&transport=polling,126,0,0
+1778467661852,0,websocket accept handshake,200,OK,Usuarios de chat 1-6,text,true,,8,0,17,17,null,0,0,0
+1778467661935,0,Debug Sampler,200,OK,Usuarios de chat 1-11,text,true,,19632,0,18,18,null,0,0,0
+1778467661959,1,Ask for connection,200,OK,Usuarios de chat 1-1,,true,,0,8,18,18,null,0,0,0
+1778467661988,1,HTTP Request,200,OK,Usuarios de chat 1-14,text,true,,300,180,18,18,http://localhost:3001/socket.io/?EIO=4&transport=polling,1,0,0
+1778467662015,0,websocket accept handshake,200,OK,Usuarios de chat 1-7,text,true,,8,0,18,18,null,0,0,0
+1778467662082,0,Web socket handshake,200,OK,Usuarios de chat 1-9,,true,,0,12,18,18,null,0,0,0
+1778467662096,0,websocket confirm handshake,200,OK,Usuarios de chat 1-5,,true,,0,7,18,18,null,0,0,0
+1778467662226,2,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-10,,true,,129,243,18,18,null,0,0,2
+1778467662294,2,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-8,,true,,129,243,18,18,null,0,0,2
+1778467662331,1,HTTP Request,200,OK,Usuarios de chat 1-15,text,true,,300,180,18,18,http://localhost:3001/socket.io/?EIO=4&transport=polling,1,0,0
+1778467662403,188,Verificar sala y pin,200,OK,Usuarios de chat 1-16,text,true,,234,251,19,19,http://localhost:3001/api/rooms/95A55712/verify,188,0,1
+1778467662676,0,websocket accept handshake,200,OK,Usuarios de chat 1-4,text,true,,8,0,19,19,null,0,0,0
+1778467662676,0,websocket accept handshake,200,OK,Usuarios de chat 1-9,text,true,,8,0,19,19,null,0,0,0
+1778467662695,0,Ask for connection,200,OK,Usuarios de chat 1-5,,true,,0,8,19,19,null,0,0,0
+1778467662770,0,websocket greet and accept,200,OK,Usuarios de chat 1-2,text,true,,34,0,19,19,null,0,0,0
+1778467662818,0,Debug Sampler,200,OK,Usuarios de chat 1-12,text,true,,19632,0,19,19,null,0,0,0
+1778467662858,0,websocket confirm handshake,200,OK,Usuarios de chat 1-6,,true,,0,7,19,19,null,0,0,0
+1778467662944,0,Debug Sampler,200,OK,Usuarios de chat 1-13,text,true,,19632,0,20,20,null,0,0,0
+1778467663034,0,Web socket handshake,200,OK,Usuarios de chat 1-8,,true,,0,12,20,20,null,0,0,0
+1778467663053,0,Debug Sampler,200,OK,Usuarios de chat 1-14,text,true,,19632,0,20,20,null,0,0,0
+1778467663063,0,Web socket handshake,200,OK,Usuarios de chat 1-10,,true,,0,12,20,20,null,0,0,0
+1778467663076,0,Extra reader for noop,200,OK,Usuarios de chat 1-3,text,true,,3,0,20,20,null,0,0,0
+1778467662918,173,Verificar sala y pin,200,OK,Usuarios de chat 1-17,text,true,,234,250,20,20,http://localhost:3001/api/rooms/95A55712/verify,173,0,1
+1778467663196,0,websocket confirm handshake,200,OK,Usuarios de chat 1-4,,true,,0,7,20,20,null,0,0,0
+1778467663036,229,Verificar sala y pin,200,OK,Usuarios de chat 1-19,text,true,,234,251,20,20,http://localhost:3001/api/rooms/95A55712/verify,229,0,1
+1778467663097,169,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-11,,true,,129,244,20,20,null,0,0,169
+1778467663270,0,websocket confirm handshake,200,OK,Usuarios de chat 1-7,,true,,0,7,20,20,null,0,0,0
+1778467663337,1,Extra reader for noop,200,OK,Usuarios de chat 1-1,text,true,,3,0,20,20,null,0,0,0
+1778467663259,179,Verificar sala y pin,200,OK,Usuarios de chat 1-18,text,true,,234,251,21,21,http://localhost:3001/api/rooms/95A55712/verify,179,0,1
+1778467663532,0,Extra reader for noop,200,OK,Usuarios de chat 1-5,text,true,,3,0,21,21,null,0,0,0
+1778467663781,1,Debug Sampler,200,OK,Usuarios de chat 1-15,text,true,,19632,0,21,21,null,0,0,0
+1778467663810,0,Ask for connection,200,OK,Usuarios de chat 1-6,,true,,0,8,21,21,null,0,0,0
+1778467663821,1,HTTP Request,200,OK,Usuarios de chat 1-16,text,true,,300,180,21,21,http://localhost:3001/socket.io/?EIO=4&transport=polling,1,0,0
+1778467663837,0,websocket accept handshake,200,OK,Usuarios de chat 1-8,text,true,,8,0,21,21,null,0,0,0
+1778467663857,1,Join Room,200,OK,Usuarios de chat 1-2,,true,,0,79,21,21,null,0,0,0
+1778467663919,0,websocket greet and accept,200,OK,Usuarios de chat 1-3,text,true,,34,0,21,21,null,0,0,0
+1778467664084,0,websocket confirm handshake,200,OK,Usuarios de chat 1-9,,true,,0,7,22,22,null,0,0,0
+1778467663860,230,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-14,,true,,129,244,22,22,null,0,0,230
+1778467664042,48,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-13,,true,,129,244,22,22,null,0,0,48
+1778467664124,0,Ask for connection,200,OK,Usuarios de chat 1-7,,true,,0,8,22,22,null,0,0,0
+1778467664202,0,Ask for connection,200,OK,Usuarios de chat 1-4,,true,,0,8,22,22,null,0,0,0
+1778467663937,326,Verificar sala y pin,200,OK,Usuarios de chat 1-20,text,true,,234,251,22,22,http://localhost:3001/api/rooms/95A55712/verify,326,0,1
+1778467664219,46,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-12,,true,,129,243,22,22,null,0,0,46
+1778467664266,0,Web socket handshake,200,OK,Usuarios de chat 1-11,,true,,0,12,22,22,null,0,0,0
+1778467664301,0,websocket greet and accept,200,OK,Usuarios de chat 1-1,text,true,,34,0,22,22,null,0,0,0
+1778467664434,0,websocket accept handshake,200,OK,Usuarios de chat 1-10,text,true,,8,0,23,23,null,0,0,0
+1778467664150,286,Verificar sala y pin,200,OK,Usuarios de chat 1-21,text,true,,234,251,23,23,http://localhost:3001/api/rooms/95A55712/verify,286,0,1
+1778467664499,1,HTTP Request,200,OK,Usuarios de chat 1-17,text,true,,300,180,23,23,http://localhost:3001/socket.io/?EIO=4&transport=polling,1,0,0
+1778467664639,0,Extra reader for noop,200,OK,Usuarios de chat 1-7,text,true,,3,0,23,23,null,0,0,0
+1778467664654,1,HTTP Request,200,OK,Usuarios de chat 1-18,text,true,,300,180,23,23,http://localhost:3001/socket.io/?EIO=4&transport=polling,1,0,0
+1778467664656,1,HTTP Request,200,OK,Usuarios de chat 1-19,text,true,,300,180,23,23,http://localhost:3001/socket.io/?EIO=4&transport=polling,1,0,0
+1778467664702,0,Join Room,200,OK,Usuarios de chat 1-3,,true,,0,79,23,23,null,0,0,0
+1778467664769,0,websocket greet and accept,200,OK,Usuarios de chat 1-5,text,true,,34,0,23,23,null,0,0,0
+1778467664800,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-2,text,true,,98,0,23,23,null,0,0,0
+1778467664808,0,websocket accept handshake,200,OK,Usuarios de chat 1-11,text,true,,8,0,23,23,null,0,0,0
+1778467664907,0,websocket confirm handshake,200,OK,Usuarios de chat 1-8,,true,,0,7,23,23,null,0,0,0
+1778467664954,0,Ask for connection,200,OK,Usuarios de chat 1-9,,true,,0,8,24,24,null,0,0,0
+1778467665133,0,Web socket handshake,200,OK,Usuarios de chat 1-13,,true,,0,12,24,24,null,0,0,0
+1778467665137,0,Join Room,200,OK,Usuarios de chat 1-1,,true,,0,79,24,24,null,0,0,0
+1778467665139,0,Web socket handshake,200,OK,Usuarios de chat 1-12,,true,,0,12,24,24,null,0,0,0
+1778467665160,0,Extra reader for noop,200,OK,Usuarios de chat 1-6,text,true,,3,0,24,24,null,0,0,0
+1778467665187,0,Extra reader for noop,200,OK,Usuarios de chat 1-4,text,true,,3,0,24,24,null,0,0,0
+1778467665056,179,Verificar sala y pin,200,OK,Usuarios de chat 1-22,text,true,,234,251,24,24,http://localhost:3001/api/rooms/95A55712/verify,179,0,1
+1778467665269,0,websocket greet and accept,200,OK,Usuarios de chat 1-7,text,true,,34,0,24,24,null,0,0,0
+1778467665291,0,Debug Sampler,200,OK,Usuarios de chat 1-16,text,true,,19632,0,24,24,null,0,0,0
+1778467665090,211,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-15,,true,,129,243,24,24,null,0,0,211
+1778467665316,0,Web socket handshake,200,OK,Usuarios de chat 1-14,,true,,0,12,24,24,null,0,0,0
+1778467665370,3,Obtener lista de usuarios,200,OK,Usuarios de chat 1-2,text,true,,19992,0,24,24,null,0,0,0
+1778467665372,1,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-2,text,true,,19954,0,24,24,null,0,0,0
+1778467665396,1,Debug Sampler,200,OK,Usuarios de chat 1-19,text,true,,19632,0,24,24,null,0,0,0
+1778467665448,26,HTTP Request,200,OK,Usuarios de chat 1-20,text,true,,300,180,25,25,http://localhost:3001/socket.io/?EIO=4&transport=polling,26,0,0
+1778467665404,71,HTTP Request,200,OK,Usuarios de chat 1-21,text,true,,300,179,25,25,http://localhost:3001/socket.io/?EIO=4&transport=polling,70,0,0
+1778467665476,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-3,text,true,,98,0,25,25,null,0,0,0
+1778467665488,0,Ask for connection,200,OK,Usuarios de chat 1-8,,true,,0,8,25,25,null,0,0,0
+1778467665447,199,Verificar sala y pin,200,OK,Usuarios de chat 1-23,text,true,,234,251,25,25,http://localhost:3001/api/rooms/95A55712/verify,199,0,1
+1778467665699,0,Extra reader for noop,200,OK,Usuarios de chat 1-9,text,true,,3,0,25,25,null,0,0,0
+1778467665720,0,Join Room,200,OK,Usuarios de chat 1-5,,true,,0,79,25,25,null,0,0,0
+1778467665743,0,Debug Sampler,200,OK,Usuarios de chat 1-18,text,true,,19631,0,25,25,null,0,0,0
+1778467665793,0,Debug Sampler,200,OK,Usuarios de chat 1-17,text,true,,19632,0,25,25,null,0,0,0
+1778467665803,0,websocket confirm handshake,200,OK,Usuarios de chat 1-10,,true,,0,7,25,25,null,0,0,0
+1778467665867,1,websocket greet and accept,200,OK,Usuarios de chat 1-6,text,true,,34,0,25,25,null,0,0,0
+1778467665925,0,websocket accept handshake,200,OK,Usuarios de chat 1-13,text,true,,8,0,25,25,null,0,0,0
+1778467665954,0,websocket confirm handshake,200,OK,Usuarios de chat 1-11,,true,,0,7,26,26,null,0,0,0
+1778467666029,0,Obtener lista de usuarios,200,OK,Usuarios de chat 1-3,text,true,,20001,0,26,26,null,0,0,0
+1778467666029,0,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-3,text,true,,19954,0,26,26,null,0,0,0
+1778467666200,0,Join Room,200,OK,Usuarios de chat 1-7,,true,,0,79,26,26,null,0,0,0
+1778467666205,0,websocket accept handshake,200,OK,Usuarios de chat 1-14,text,true,,8,0,26,26,null,0,0,0
+1778467666228,0,websocket accept handshake,200,OK,Usuarios de chat 1-12,text,true,,8,0,26,26,null,0,0,0
+1778467666057,174,Verificar sala y pin,200,OK,Usuarios de chat 1-24,text,true,,234,251,26,26,http://localhost:3001/api/rooms/95A55712/verify,174,0,1
+1778467666082,151,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-19,,true,,129,244,26,26,null,0,0,151
+1778467666301,1,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-1,text,true,,98,0,26,26,null,0,0,0
+1778467666319,143,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-16,,true,,129,244,27,27,null,0,0,143
+1778467666340,122,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-18,,true,,129,244,27,27,null,0,0,122
+1778467666486,0,websocket greet and accept,200,OK,Usuarios de chat 1-4,text,true,,34,0,27,27,null,0,0,0
+1778467666495,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-5,text,true,,98,0,27,27,null,0,0,0
+1778467666498,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-2,text,true,,47,0,27,27,null,0,0,0
+1778467666534,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-3,text,true,,56,0,27,27,null,0,0,0
+1778467666647,1,websocket greet and accept,200,OK,Usuarios de chat 1-9,text,true,,34,0,27,27,null,0,0,0
+1778467666667,1,websocket confirm handshake,200,OK,Usuarios de chat 1-13,,true,,0,7,27,27,null,0,0,0
+1778467666511,174,Verificar sala y pin,200,OK,Usuarios de chat 1-26,text,true,,234,251,27,27,http://localhost:3001/api/rooms/95A55712/verify,174,0,1
+1778467666586,99,HTTP Request,200,OK,Usuarios de chat 1-22,text,true,,300,179,27,27,http://localhost:3001/socket.io/?EIO=4&transport=polling,99,0,0
+1778467666733,1,HTTP Request,200,OK,Usuarios de chat 1-24,text,true,,300,179,27,27,http://localhost:3001/socket.io/?EIO=4&transport=polling,1,0,0
+1778467666750,0,Debug Sampler,200,OK,Usuarios de chat 1-20,text,true,,19632,0,27,27,null,0,0,0
+1778467666760,0,websocket confirm handshake,200,OK,Usuarios de chat 1-14,,true,,0,7,27,27,null,0,0,0
+1778467666774,1,Web socket handshake,200,OK,Usuarios de chat 1-15,,true,,0,12,27,27,null,0,0,0
+1778467666778,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-7,text,true,,98,0,27,27,null,0,0,0
+1778467666784,0,Debug Sampler,200,OK,Usuarios de chat 1-21,text,true,,19632,0,27,27,null,0,0,0
+1778467666806,0,Extra reader for noop,200,OK,Usuarios de chat 1-8,text,true,,3,0,27,27,null,0,0,0
+1778467666840,0,websocket confirm handshake,200,OK,Usuarios de chat 1-12,,true,,0,7,27,27,null,0,0,0
+1778467666821,176,Verificar sala y pin,200,OK,Usuarios de chat 1-25,text,true,,234,251,28,28,http://localhost:3001/api/rooms/95A55712/verify,176,0,1
+1778467666961,37,HTTP Request,200,OK,Usuarios de chat 1-23,text,true,,300,180,28,28,http://localhost:3001/socket.io/?EIO=4&transport=polling,37,0,0
+1778467666981,18,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-17,,true,,129,243,28,28,null,0,0,18
+1778467667046,0,Ask for connection,200,OK,Usuarios de chat 1-11,,true,,0,8,28,28,null,0,0,0
+1778467667116,0,Send Message,200,OK,Usuarios de chat 1-2,,true,,0,58,28,28,null,0,0,0
+1778467667146,1,Obtener lista de usuarios,200,OK,Usuarios de chat 1-5,text,true,,20019,0,28,28,null,0,0,0
+1778467667147,0,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-5,text,true,,19954,0,28,28,null,0,0,0
+1778467667150,0,Join Room,200,OK,Usuarios de chat 1-6,,true,,0,79,28,28,null,0,0,0
+1778467667204,0,Ask for connection,200,OK,Usuarios de chat 1-10,,true,,0,8,28,28,null,0,0,0
+1778467667270,0,Ask for connection,200,OK,Usuarios de chat 1-13,,true,,0,8,28,28,null,0,0,0
+1778467667241,82,HTTP Request,200,OK,Usuarios de chat 1-26,text,true,,300,180,28,28,http://localhost:3001/socket.io/?EIO=4&transport=polling,82,0,0
+1778467667327,1,Web socket handshake,200,OK,Usuarios de chat 1-19,,true,,0,12,28,28,null,0,0,0
+1778467667498,0,Ask for connection,200,OK,Usuarios de chat 1-14,,true,,0,8,29,29,null,0,0,0
+1778467667542,0,websocket accept handshake,200,OK,Usuarios de chat 1-15,text,true,,8,0,29,29,null,0,0,0
+1778467667572,0,Ask for connection,200,OK,Usuarios de chat 1-12,,true,,0,8,29,29,null,0,0,0
+1778467667580,0,Extra reader for noop,200,OK,Usuarios de chat 1-11,text,true,,3,0,29,29,null,0,0,0
+1778467667580,0,Join Room,200,OK,Usuarios de chat 1-4,,true,,0,79,29,29,null,0,0,0
+1778467667593,0,Obtener lista de usuarios,200,OK,Usuarios de chat 1-1,text,true,,20010,0,29,29,null,0,0,0
+1778467667593,0,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-1,text,true,,19954,0,29,29,null,0,0,0
+1778467667594,0,Send Message,200,OK,Usuarios de chat 1-3,,true,,0,58,29,29,null,0,0,0
+1778467667638,1,Web socket handshake,200,OK,Usuarios de chat 1-18,,true,,0,12,29,29,null,0,0,0
+1778467667732,0,Web socket handshake,200,OK,Usuarios de chat 1-16,,true,,0,12,29,29,null,0,0,0
+1778467667764,1,HTTP Request,200,OK,Usuarios de chat 1-25,text,true,,300,180,29,29,http://localhost:3001/socket.io/?EIO=4&transport=polling,1,0,0
+1778467667804,0,websocket greet and accept,200,OK,Usuarios de chat 1-8,text,true,,34,0,29,29,null,0,0,0
+1778467667875,2,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-20,,true,,129,244,29,29,null,0,0,2
+1778467667915,0,Debug Sampler,200,OK,Usuarios de chat 1-24,text,true,,19632,0,29,29,null,0,0,0
+1778467667949,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-5,text,true,,74,0,30,30,null,0,0,0
+1778467667987,0,Obtener lista de usuarios,200,OK,Usuarios de chat 1-7,text,true,,20028,0,30,30,null,0,0,0
+1778467667987,0,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-7,text,true,,19954,0,30,30,null,0,0,0
+1778467667988,1,Debug Sampler,200,OK,Usuarios de chat 1-22,text,true,,19632,0,30,30,null,0,0,0
+1778467668009,0,Web socket handshake,200,OK,Usuarios de chat 1-17,,true,,0,12,30,30,null,0,0,0
+1778467668024,0,Join Room,200,OK,Usuarios de chat 1-9,,true,,0,79,30,30,null,0,0,0
+1778467668030,0,Extra reader for noop,200,OK,Usuarios de chat 1-10,text,true,,3,0,30,30,null,0,0,0
+1778467667908,174,Verificar sala y pin,200,OK,Usuarios de chat 1-27,text,true,,234,251,30,30,http://localhost:3001/api/rooms/95A55712/verify,174,0,0
+1778467668168,0,Debug Sampler,200,OK,Usuarios de chat 1-23,text,true,,19632,0,30,30,null,0,0,0
+1778467668177,0,websocket confirm handshake,200,OK,Usuarios de chat 1-15,,true,,0,7,30,30,null,0,0,0
+1778467668208,0,websocket accept handshake,200,OK,Usuarios de chat 1-19,text,true,,8,0,30,30,null,0,0,0
+1778467668224,33,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-21,,true,,129,243,30,30,null,0,0,33
+1778467668260,0,Extra reader for noop,200,OK,Usuarios de chat 1-12,text,true,,3,0,30,30,null,0,0,0
+1778467668269,0,Extra reader for noop,200,OK,Usuarios de chat 1-14,text,true,,3,0,30,30,null,0,0,0
+1778467668330,0,websocket accept handshake,200,OK,Usuarios de chat 1-18,text,true,,8,0,30,30,null,0,0,0
+1778467668363,0,Debug Sampler,200,OK,Usuarios de chat 1-26,text,true,,19632,0,30,30,null,0,0,0
+1778467668392,0,Extra reader for noop,200,OK,Usuarios de chat 1-13,text,true,,3,0,30,30,null,0,0,0
+1778467668010,417,Verificar sala y pin,200,OK,Usuarios de chat 1-28,text,true,,234,251,31,31,http://localhost:3001/api/rooms/95A55712/verify,417,0,0
+1778467668441,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-6,text,true,,274,0,31,31,null,0,0,0
+1778467668484,0,websocket greet and accept,200,OK,Usuarios de chat 1-11,text,true,,34,0,31,31,null,0,0,0
+1778467668493,0,Recibir Mensaje,200,OK,Usuarios de chat 1-2,text,false,Test failed: text expected to contain /new_message/,41,0,31,31,null,0,0,0
+1778467668512,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-1,text,true,,65,0,31,31,null,0,0,0
+1778467668568,0,Recibir Mensaje,200,OK,Usuarios de chat 1-3,text,false,Test failed: text expected to contain /new_message/,41,0,31,31,null,0,0,0
+1778467668599,0,Debug Sampler,200,OK,Usuarios de chat 1-25,text,true,,19632,0,31,31,null,0,0,0
+1778467668678,2,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-24,,true,,129,244,31,31,null,0,0,2
+1778467668718,0,Ask for connection,200,OK,Usuarios de chat 1-15,,true,,0,8,31,31,null,0,0,0
+1778467668730,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-9,text,true,,449,0,31,31,null,0,0,0
+1778467668752,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-4,text,true,,274,0,31,31,null,0,0,0
+1778467668756,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-7,text,true,,196,0,31,31,null,0,0,0
+1778467668809,1,websocket confirm handshake,200,OK,Usuarios de chat 1-19,,true,,0,7,31,31,null,0,0,0
+1778467668833,0,Web socket handshake,200,OK,Usuarios de chat 1-21,,true,,0,12,31,31,null,0,0,0
+1778467668894,0,websocket accept handshake,200,OK,Usuarios de chat 1-17,text,true,,8,0,31,31,null,0,0,0
+1778467668730,174,Verificar sala y pin,200,OK,Usuarios de chat 1-29,text,true,,234,250,31,31,http://localhost:3001/api/rooms/95A55712/verify,174,0,1
+1778467668886,19,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-22,,true,,129,243,31,31,null,0,0,19
+1778467668938,1,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-26,,true,,129,244,32,32,null,0,0,1
+1778467668944,0,websocket greet and accept,200,OK,Usuarios de chat 1-10,text,true,,34,0,32,32,null,0,0,0
+1778467668962,0,websocket accept handshake,200,OK,Usuarios de chat 1-16,text,true,,8,0,32,32,null,0,0,0
+1778467668983,0,websocket greet and accept,200,OK,Usuarios de chat 1-14,text,true,,34,0,32,32,null,0,0,0
+1778467669024,1,Salir Chat,200,OK,Usuarios de chat 1-2,,true,,0,8,32,32,null,0,0,0
+1778467669033,0,Send Message,200,OK,Usuarios de chat 1-5,,true,,0,58,32,32,null,0,0,0
+1778467669053,0,Join Room,200,OK,Usuarios de chat 1-8,,true,,0,79,32,32,null,0,0,0
+1778467669098,0,Web socket handshake,200,OK,Usuarios de chat 1-20,,true,,0,12,32,32,null,0,0,0
+1778467668945,173,Verificar sala y pin,200,OK,Usuarios de chat 1-31,text,true,,234,251,32,32,http://localhost:3001/api/rooms/95A55712/verify,173,0,1
+1778467669089,31,HTTP Request,200,OK,Usuarios de chat 1-27,text,true,,300,180,32,32,http://localhost:3001/socket.io/?EIO=4&transport=polling,31,0,0
+1778467669013,108,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-23,,true,,129,244,32,32,null,0,0,108
+1778467669195,0,websocket greet and accept,200,OK,Usuarios de chat 1-13,text,true,,34,0,32,32,null,0,0,0
+1778467669207,1,Join Room,200,OK,Usuarios de chat 1-11,,true,,0,80,32,32,null,0,0,0
+1778467669256,0,Web socket handshake,200,OK,Usuarios de chat 1-24,,true,,0,12,32,32,null,0,0,0
+1778467669284,0,Obtener lista de usuarios,200,OK,Usuarios de chat 1-4,text,true,,20046,0,32,32,null,0,0,0
+1778467669284,0,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-4,text,true,,19954,0,32,32,null,0,0,0
+1778467669149,144,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-25,,true,,129,244,32,32,null,0,0,144
+1778467669459,7,HTTP Request,200,OK,Usuarios de chat 1-28,text,true,,300,180,33,33,http://localhost:3001/socket.io/?EIO=4&transport=polling,7,0,0
+1778467669409,57,HTTP Request,200,OK,Usuarios de chat 1-29,text,true,,300,180,33,33,http://localhost:3001/socket.io/?EIO=4&transport=polling,57,0,0
+1778467669560,0,Salir Chat,200,OK,Usuarios de chat 1-3,,true,,0,8,33,33,null,0,0,0
+1778467669593,0,Recibir Mensaje,200,OK,Usuarios de chat 1-5,text,false,Test failed: text expected to contain /new_message/,41,0,33,33,null,0,0,0
+1778467669598,0,Obtener lista de usuarios,200,OK,Usuarios de chat 1-9,text,true,,20055,0,33,33,null,0,0,0
+1778467669598,0,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-9,text,true,,19954,0,33,33,null,0,0,0
+1778467669317,324,Verificar sala y pin,200,OK,Usuarios de chat 1-30,text,true,,234,251,33,33,http://localhost:3001/api/rooms/95A55712/verify,324,0,1
+1778467669650,0,websocket accept handshake,200,OK,Usuarios de chat 1-21,text,true,,8,0,33,33,null,0,0,0
+1778467669663,0,websocket confirm handshake,200,OK,Usuarios de chat 1-18,,true,,0,7,33,33,null,0,0,0
+1778467669692,0,websocket greet and accept,200,OK,Usuarios de chat 1-12,text,true,,34,0,33,33,null,0,0,0
+1778467669750,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-11,text,true,,624,0,33,33,null,0,0,0
+1778467669758,0,Send Message,200,OK,Usuarios de chat 1-1,,true,,0,58,33,33,null,0,0,0
+1778467669762,0,Join Room,200,OK,Usuarios de chat 1-13,,true,,0,80,33,33,null,0,0,0
+1778467669785,0,Web socket handshake,200,OK,Usuarios de chat 1-22,,true,,0,12,33,33,null,0,0,0
+1778467669785,1,Obtener lista de usuarios,200,OK,Usuarios de chat 1-6,text,true,,20037,0,33,33,null,0,0,0
+1778467669785,1,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-6,text,true,,19954,0,33,33,null,0,0,0
+1778467669789,0,websocket accept handshake,200,OK,Usuarios de chat 1-24,text,true,,8,0,33,33,null,0,0,0
+1778467669878,0,Join Room,200,OK,Usuarios de chat 1-14,,true,,0,80,33,33,null,0,0,0
+1778467669911,24,HTTP Request,200,OK,Usuarios de chat 1-31,text,true,,300,180,34,34,http://localhost:3001/socket.io/?EIO=4&transport=polling,24,0,0
+1778467669939,0,Web socket handshake,200,OK,Usuarios de chat 1-25,,true,,0,12,34,34,null,0,0,0
+1778467669993,1,Ask for connection,200,OK,Usuarios de chat 1-19,,true,,0,8,34,34,null,0,0,0
+1778467670071,0,Extra reader for noop,200,OK,Usuarios de chat 1-15,text,true,,3,0,34,34,null,0,0,0
+1778467670103,0,Web socket handshake,200,OK,Usuarios de chat 1-26,,true,,0,12,34,34,null,0,0,0
+1778467670124,0,Send Message,200,OK,Usuarios de chat 1-7,,true,,0,58,34,34,null,0,0,0
+1778467670126,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""user_list"",{""users"":[""user_2"",""user_3"",""user_1""]}]'",Usuarios de chat 1-2,,false,,0,31,34,34,null,0,0,0
+1778467670135,0,Join Room,200,OK,Usuarios de chat 1-10,,true,,0,80,33,33,null,0,0,0
+1778467670156,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-4,text,true,,196,0,33,33,null,0,0,0
+1778467670186,0,websocket confirm handshake,200,OK,Usuarios de chat 1-16,,true,,0,7,33,33,null,0,0,0
+1778467670206,0,websocket accept handshake,200,OK,Usuarios de chat 1-20,text,true,,8,0,33,33,null,0,0,0
+1778467670212,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""user_list"",{""users"":[""user_2"",""user_3"",""user_1"",""user_5""]}]'",Usuarios de chat 1-3,,false,,0,31,33,33,null,0,0,0
+1778467670227,0,websocket confirm handshake,200,OK,Usuarios de chat 1-17,,true,,0,7,32,32,null,0,0,0
+1778467670276,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-8,text,false,Test failed: text expected to contain /room_joined/,196,0,32,32,null,0,0,0
+1778467669998,283,Verificar sala y pin,200,OK,Usuarios de chat 1-32,text,true,,234,250,32,32,http://localhost:3001/api/rooms/95A55712/verify,283,0,1
+1778467670346,0,Debug Sampler,200,OK,Usuarios de chat 1-29,text,true,,19632,0,32,32,null,0,0,0
+1778467670353,0,Obtener lista de usuarios,200,OK,Usuarios de chat 1-11,text,true,,20066,0,32,32,null,0,0,0
+1778467670353,0,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-11,text,true,,19955,0,32,32,null,0,0,0
+1778467670393,0,Debug Sampler,200,OK,Usuarios de chat 1-27,text,true,,19632,0,32,32,null,0,0,0
+1778467670521,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-9,text,true,,39,0,33,33,null,0,0,0
+1778467670546,1,Web socket handshake,200,OK,Usuarios de chat 1-23,,true,,0,12,33,33,null,0,0,0
+1778467670556,1,Debug Sampler,200,OK,Usuarios de chat 1-28,text,true,,19632,0,33,33,null,0,0,0
+1778467670342,286,Verificar sala y pin,200,OK,Usuarios de chat 1-33,text,true,,234,251,33,33,http://localhost:3001/api/rooms/95A55712/verify,286,0,1
+1778467670643,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-13,text,true,,799,0,33,33,null,0,0,0
+1778467670680,1,websocket accept handshake,200,OK,Usuarios de chat 1-25,text,true,,8,0,33,33,null,0,0,0
+1778467670751,0,Join Room,200,OK,Usuarios de chat 1-12,,true,,0,80,33,33,null,0,0,0
+1778467670785,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-14,text,true,,799,0,33,33,null,0,0,0
+1778467670807,0,Ask for connection,200,OK,Usuarios de chat 1-16,,true,,0,8,33,33,null,0,0,0
+1778467670658,173,Verificar sala y pin,200,OK,Usuarios de chat 1-34,text,true,,234,251,33,33,http://localhost:3001/api/rooms/95A55712/verify,173,0,1
+1778467670846,0,websocket greet and accept,200,OK,Usuarios de chat 1-15,text,true,,34,0,33,33,null,0,0,0
+1778467670679,209,HTTP Request,200,OK,Usuarios de chat 1-30,text,true,,300,179,33,33,http://localhost:3001/socket.io/?EIO=4&transport=polling,209,0,0
+1778467670906,0,Salir Chat,200,OK,Usuarios de chat 1-5,,true,,0,8,33,33,null,0,0,0
+1778467670929,0,websocket accept handshake,200,OK,Usuarios de chat 1-22,text,true,,8,0,34,34,null,0,0,0
+1778467671047,0,websocket confirm handshake,200,OK,Usuarios de chat 1-24,,true,,0,7,34,34,null,0,0,0
+1778467671059,1,websocket confirm handshake,200,OK,Usuarios de chat 1-21,,true,,0,7,34,34,null,0,0,0
+1778467671078,0,Send Message,200,OK,Usuarios de chat 1-4,,true,,0,58,34,34,null,0,0,0
+1778467671094,0,Ask for connection,200,OK,Usuarios de chat 1-18,,true,,0,8,34,34,null,0,0,0
+1778467671121,0,Send Message,200,OK,Usuarios de chat 1-9,,true,,0,58,34,34,null,0,0,0
+1778467671173,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-6,text,true,,92,0,34,34,null,0,0,0
+1778467671210,0,Extra reader for noop,200,OK,Usuarios de chat 1-19,text,true,,3,0,34,34,null,0,0,0
+1778467671226,0,Recibir Mensaje,200,OK,Usuarios de chat 1-1,text,false,Test failed: text expected to contain /new_message/,41,0,34,34,null,0,0,0
+1778467671239,0,websocket confirm handshake,200,OK,Usuarios de chat 1-20,,true,,0,7,34,34,null,0,0,0
+1778467671300,0,websocket accept handshake,200,OK,Usuarios de chat 1-26,text,true,,8,0,34,34,null,0,0,0
+1778467671301,2,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-28,,true,,129,244,34,34,null,0,0,2
+1778467671328,2,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-27,,true,,129,243,34,34,null,0,0,2
+1778467671384,0,Recibir Mensaje,200,OK,Usuarios de chat 1-7,text,false,Test failed: text expected to contain /new_message/,83,0,34,34,null,0,0,0
+1778467671402,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-11,text,true,,39,0,34,34,null,0,0,0
+1778467671412,1,HTTP Request,200,OK,Usuarios de chat 1-34,text,true,,300,179,34,34,http://localhost:3001/socket.io/?EIO=4&transport=polling,1,0,0
+1778467671430,0,Debug Sampler,200,OK,Usuarios de chat 1-31,text,true,,19631,0,35,35,null,0,0,0
+1778467671466,0,Ask for connection,200,OK,Usuarios de chat 1-17,,true,,0,8,35,35,null,0,0,0
+1778467671467,0,websocket confirm handshake,200,OK,Usuarios de chat 1-22,,true,,0,7,35,35,null,0,0,0
+1778467671474,0,Obtener lista de usuarios,200,OK,Usuarios de chat 1-8,text,false,Test failed: text expected to contain /user_list/,20578,0,35,35,null,0,0,0
+1778467671474,0,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-8,text,true,,19954,0,35,35,null,0,0,0
+1778467671513,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-10,text,false,Test failed: text expected to contain /room_joined/,196,0,35,35,null,0,0,0
+1778467671545,0,websocket accept handshake,200,OK,Usuarios de chat 1-23,text,true,,8,0,35,35,null,0,0,0
+1778467671616,1,Obtener lista de usuarios,200,OK,Usuarios de chat 1-13,text,true,,20067,0,35,35,null,0,0,0
+1778467671616,1,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-13,text,true,,19955,0,35,35,null,0,0,0
+1778467671635,0,websocket confirm handshake,200,OK,Usuarios de chat 1-25,,true,,0,7,35,35,null,0,0,0
+1778467671644,2,HTTP Request,200,OK,Usuarios de chat 1-32,text,true,,300,180,35,35,http://localhost:3001/socket.io/?EIO=4&transport=polling,2,0,0
+1778467671792,0,Join Room,200,OK,Usuarios de chat 1-15,,true,,0,80,35,35,null,0,0,0
+1778467671799,0,Debug Sampler,200,OK,Usuarios de chat 1-30,text,true,,19632,0,35,35,null,0,0,0
+1778467671669,181,Verificar sala y pin,200,OK,Usuarios de chat 1-36,text,true,,234,249,35,35,http://localhost:3001/api/rooms/95A55712/verify,181,0,1
+1778467671797,56,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-29,,true,,129,243,35,35,null,0,0,56
+1778467671975,0,Extra reader for noop,200,OK,Usuarios de chat 1-16,text,true,,3,0,36,36,null,0,0,0
+1778467671983,0,websocket greet and accept,200,OK,Usuarios de chat 1-19,text,true,,34,0,36,36,null,0,0,0
+1778467671997,0,Ask for connection,200,OK,Usuarios de chat 1-21,,true,,0,8,36,36,null,0,0,0
+1778467672014,0,websocket confirm handshake,200,OK,Usuarios de chat 1-26,,true,,0,7,36,36,null,0,0,0
+1778467672046,0,Send Message,200,OK,Usuarios de chat 1-6,,true,,0,58,36,36,null,0,0,0
+1778467672049,0,Ask for connection,200,OK,Usuarios de chat 1-24,,true,,0,8,36,36,null,0,0,0
+1778467672052,0,Recibir Mensaje,200,OK,Usuarios de chat 1-9,text,false,Test failed: text expected to contain /new_message/,92,0,36,36,null,0,0,0
+1778467672064,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-12,text,false,Test failed: text expected to contain /room_joined/,39,0,36,36,null,0,0,0
+1778467672086,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-8,text,true,,101,0,36,36,null,0,0,0
+1778467672097,0,Obtener lista de usuarios,200,OK,Usuarios de chat 1-10,text,false,Test failed: text expected to contain /user_list/,20930,0,36,36,null,0,0,0
+1778467672097,0,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-10,text,true,,19956,0,36,36,null,0,0,0
+1778467672117,0,websocket confirm handshake,200,OK,Usuarios de chat 1-23,,true,,0,7,36,36,null,0,0,0
+1778467671713,543,Verificar sala y pin,200,OK,Usuarios de chat 1-35,text,true,,234,250,36,36,http://localhost:3001/api/rooms/95A55712/verify,543,0,1
+1778467672110,147,HTTP Request,200,OK,Usuarios de chat 1-33,text,true,,300,180,36,36,http://localhost:3001/socket.io/?EIO=4&transport=polling,147,0,0
+1778467672273,1,Obtener lista de usuarios,200,OK,Usuarios de chat 1-14,text,true,,20077,0,36,36,null,0,0,0
+1778467672273,1,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-14,text,true,,19955,0,36,36,null,0,0,0
+1778467672288,0,Recibir Mensaje,200,OK,Usuarios de chat 1-4,text,false,Test failed: text expected to contain /new_message/,101,0,36,36,null,0,0,0
+1778467672313,0,Extra reader for noop,200,OK,Usuarios de chat 1-18,text,true,,3,0,36,36,null,0,0,0
+1778467672379,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""new_message"",{""roomId"":""95A55712"",""nickname"":""user_2"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:47.118451""}]'",Usuarios de chat 1-5,,false,,0,31,36,36,null,0,0,0
+1778467672387,2,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-30,,true,,129,244,35,35,null,0,0,2
+1778467672430,0,Salir Chat,200,OK,Usuarios de chat 1-7,,true,,0,8,36,36,null,0,0,0
+1778467672444,1,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-31,,true,,129,243,36,36,null,0,0,1
+1778467672475,0,Ask for connection,200,OK,Usuarios de chat 1-20,,true,,0,8,36,36,null,0,0,0
+1778467672487,0,Ask for connection,200,OK,Usuarios de chat 1-22,,true,,0,8,36,36,null,0,0,0
+1778467672498,0,Extra reader for noop,200,OK,Usuarios de chat 1-21,text,true,,3,0,36,36,null,0,0,0
+1778467672523,0,Debug Sampler,200,OK,Usuarios de chat 1-34,text,true,,19632,0,36,36,null,0,0,0
+1778467672576,0,Web socket handshake,200,OK,Usuarios de chat 1-28,,true,,0,12,36,36,null,0,0,0
+1778467672601,0,Web socket handshake,200,OK,Usuarios de chat 1-27,,true,,0,12,36,36,null,0,0,0
+1778467672610,0,Salir Chat,200,OK,Usuarios de chat 1-1,,true,,0,8,36,36,null,0,0,0
+1778467672626,1,HTTP Request,200,OK,Usuarios de chat 1-36,text,true,,300,179,36,36,http://localhost:3001/socket.io/?EIO=4&transport=polling,1,0,0
+1778467672682,0,Extra reader for noop,200,OK,Usuarios de chat 1-24,text,true,,3,0,36,36,null,0,0,0
+1778467672798,0,Debug Sampler,200,OK,Usuarios de chat 1-32,text,true,,19632,0,36,36,null,0,0,0
+1778467672812,0,websocket greet and accept,200,OK,Usuarios de chat 1-16,text,true,,34,0,36,36,null,0,0,0
+1778467672848,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-13,text,true,,122,0,36,36,null,0,0,0
+1778467672681,177,Verificar sala y pin,200,OK,Usuarios de chat 1-37,text,true,,234,251,36,36,http://localhost:3001/api/rooms/95A55712/verify,177,0,1
+1778467672821,38,HTTP Request,200,OK,Usuarios de chat 1-35,text,true,,300,179,36,36,http://localhost:3001/socket.io/?EIO=4&transport=polling,38,0,0
+1778467672869,0,Send Message,200,OK,Usuarios de chat 1-11,,true,,0,58,36,36,null,0,0,0
+1778467672904,0,Extra reader for noop,200,OK,Usuarios de chat 1-17,text,true,,3,0,36,36,null,0,0,0
+1778467672926,0,Web socket handshake,200,OK,Usuarios de chat 1-29,,true,,0,12,37,37,null,0,0,0
+1778467672964,1,Send Message,200,OK,Usuarios de chat 1-8,,true,,0,58,37,37,null,0,0,0
+1778467672966,0,Obtener lista de usuarios,200,OK,Usuarios de chat 1-12,text,true,,20091,0,37,37,null,0,0,0
+1778467672966,0,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-12,text,true,,19956,0,37,37,null,0,0,0
+1778467672967,0,Ask for connection,200,OK,Usuarios de chat 1-23,,true,,0,8,37,37,null,0,0,0
+1778467672987,1,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-10,text,true,,134,0,37,37,null,0,0,0
+1778467673013,0,Ask for connection,200,OK,Usuarios de chat 1-25,,true,,0,8,37,37,null,0,0,0
+1778467673029,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-14,text,true,,196,0,37,37,null,0,0,0
+1778467673049,0,Salir Chat,200,OK,Usuarios de chat 1-4,,true,,0,8,37,37,null,0,0,0
+1778467673058,0,Ask for connection,200,OK,Usuarios de chat 1-26,,true,,0,8,37,37,null,0,0,0
+1778467673070,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-15,text,true,,1324,0,37,37,null,0,0,0
+1778467673127,0,Recibir Mensaje,200,OK,Usuarios de chat 1-6,text,false,Test failed: text expected to contain /new_message/,41,0,37,37,null,0,0,0
+1778467673135,0,Join Room,200,OK,Usuarios de chat 1-19,,true,,0,80,37,37,null,0,0,0
+1778467673195,0,Extra reader for noop,200,OK,Usuarios de chat 1-22,text,true,,3,0,37,37,null,0,0,0
+1778467673205,1,Salir Chat,200,OK,Usuarios de chat 1-9,,true,,0,8,37,37,null,0,0,0
+1778467673239,0,websocket greet and accept,200,OK,Usuarios de chat 1-21,text,true,,34,0,37,37,null,0,0,0
+1778467673314,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""user_joined"",{""nickname"":""user_6""}]'",Usuarios de chat 1-7,,false,,0,31,37,37,null,0,0,0
+1778467673089,229,Verificar sala y pin,200,OK,Usuarios de chat 1-38,text,true,,234,250,36,36,http://localhost:3001/api/rooms/95A55712/verify,229,0,0
+1778467673171,149,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-34,,true,,129,244,36,36,null,0,0,149
+1778467673366,0,websocket greet and accept,200,OK,Usuarios de chat 1-18,text,true,,34,0,36,36,null,0,0,0
+1778467673402,0,websocket accept handshake,200,OK,Usuarios de chat 1-28,text,true,,8,0,36,36,null,0,0,0
+1778467673435,0,Send Message,200,OK,Usuarios de chat 1-13,,true,,0,58,37,37,null,0,0,0
+1778467673441,1,Debug Sampler,200,OK,Usuarios de chat 1-33,text,true,,19632,0,37,37,null,0,0,0
+1778467673443,0,Recibir Mensaje,200,OK,Usuarios de chat 1-11,text,false,Test failed: text expected to contain /new_message/,102,0,37,37,null,0,0,0
+1778467673365,126,HTTP Request,200,OK,Usuarios de chat 1-37,text,true,,300,179,37,37,http://localhost:3001/socket.io/?EIO=4&transport=polling,126,0,0
+1778467673569,0,Extra reader for noop,200,OK,Usuarios de chat 1-26,text,true,,3,0,37,37,null,0,0,0
+1778467673579,1,Debug Sampler,200,OK,Usuarios de chat 1-35,text,true,,19632,0,37,37,null,0,0,0
+1778467673636,0,Extra reader for noop,200,OK,Usuarios de chat 1-20,text,true,,3,0,37,37,null,0,0,0
+1778467673661,0,websocket accept handshake,200,OK,Usuarios de chat 1-27,text,true,,8,0,37,37,null,0,0,0
+1778467673120,542,Verificar sala y pin,200,OK,Usuarios de chat 1-39,text,true,,234,251,37,37,http://localhost:3001/api/rooms/95A55712/verify,542,0,1
+1778467673721,2,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-32,,true,,129,244,37,37,null,0,0,2
+1778467673742,0,Web socket handshake,200,OK,Usuarios de chat 1-31,,true,,0,12,37,37,null,0,0,0
+1778467673749,0,Send Message,200,OK,Usuarios de chat 1-10,,true,,0,58,37,37,null,0,0,0
+1778467673758,0,Recibir Mensaje,200,OK,Usuarios de chat 1-8,text,false,Test failed: text expected to contain /new_message/,111,0,37,37,null,0,0,0
+1778467673760,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""user_joined"",{""nickname"":""user_9""}]'",Usuarios de chat 1-4,,false,,0,31,37,37,null,0,0,0
+1778467673808,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""user_list"",{""users"":[""user_2"",""user_3"",""user_1"",""user_5"",""user_7""]}]'",Usuarios de chat 1-1,,false,,0,31,36,36,null,0,0,0
+1778467673836,0,Join Room,200,OK,Usuarios de chat 1-21,,true,,0,80,35,35,null,0,0,0
+1778467673847,0,Web socket handshake,200,OK,Usuarios de chat 1-30,,true,,0,12,35,35,null,0,0,0
+1778467673848,0,Web socket handshake,200,OK,Usuarios de chat 1-34,,true,,0,12,35,35,null,0,0,0
+1778467673856,0,websocket accept handshake,200,OK,Usuarios de chat 1-29,text,true,,8,0,35,35,null,0,0,0
+1778467673887,0,Join Room,200,OK,Usuarios de chat 1-16,,true,,0,80,35,35,null,0,0,0
+1778467673918,0,websocket greet and accept,200,OK,Usuarios de chat 1-22,text,true,,34,0,35,35,null,0,0,0
+1778467673934,0,Salir Chat,200,OK,Usuarios de chat 1-6,,true,,0,8,36,36,null,0,0,0
+1778467673945,0,websocket greet and accept,200,OK,Usuarios de chat 1-24,text,true,,34,0,36,36,null,0,0,0
+1778467673945,0,Recibir Mensaje,200,OK,Usuarios de chat 1-13,text,false,Test failed: text expected to contain /new_message/,42,0,36,36,null,0,0,0
+1778467673960,0,Debug Sampler,200,OK,Usuarios de chat 1-36,text,true,,19632,0,36,36,null,0,0,0
+1778467674008,0,Extra reader for noop,200,OK,Usuarios de chat 1-23,text,true,,3,0,36,36,null,0,0,0
+1778467674028,0,Extra reader for noop,200,OK,Usuarios de chat 1-25,text,true,,3,0,36,36,null,0,0,0
+1778467674033,0,Join Room,200,OK,Usuarios de chat 1-18,,true,,0,80,36,36,null,0,0,0
+1778467674077,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-12,text,true,,974,0,36,36,null,0,0,0
+1778467674121,0,websocket confirm handshake,200,OK,Usuarios de chat 1-28,,true,,0,7,36,36,null,0,0,0
+1778467674167,0,websocket greet and accept,200,OK,Usuarios de chat 1-17,text,true,,34,0,36,36,null,0,0,0
+1778467674184,0,Obtener lista de usuarios,200,OK,Usuarios de chat 1-15,text,true,,20100,0,36,36,null,0,0,0
+1778467674184,0,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-15,text,true,,19955,0,36,36,null,0,0,0
+1778467674103,138,HTTP Request,200,OK,Usuarios de chat 1-38,text,true,,300,179,36,36,http://localhost:3001/socket.io/?EIO=4&transport=polling,138,0,0
+1778467674279,0,Debug Sampler,200,OK,Usuarios de chat 1-37,text,true,,19632,0,36,36,null,0,0,0
+1778467674320,0,Send Message,200,OK,Usuarios de chat 1-14,,true,,0,58,36,36,null,0,0,0
+1778467674360,1,websocket accept handshake,200,OK,Usuarios de chat 1-30,text,true,,8,0,36,36,null,0,0,0
+1778467674386,0,websocket confirm handshake,200,OK,Usuarios de chat 1-29,,true,,0,7,36,36,null,0,0,0
+1778467673906,505,Verificar sala y pin,200,OK,Usuarios de chat 1-40,text,true,,234,251,36,36,http://localhost:3001/api/rooms/95A55712/verify,505,0,1
+1778467674410,3,HTTP Request,200,OK,Usuarios de chat 1-39,text,true,,300,179,36,36,http://localhost:3001/socket.io/?EIO=4&transport=polling,3,0,0
+1778467674405,11,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-33,,true,,129,244,36,36,null,0,0,11
+1778467674469,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-16,text,true,,2202,0,37,37,null,0,0,0
+1778467674520,0,Join Room,200,OK,Usuarios de chat 1-22,,true,,0,80,37,37,null,0,0,0
+1778467674545,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-19,text,false,Test failed: text expected to contain /room_joined/,39,0,37,37,null,0,0,0
+1778467674572,0,Recibir Mensaje,200,OK,Usuarios de chat 1-10,text,false,Test failed: text expected to contain /new_message/,39,0,37,37,null,0,0,0
+1778467674619,0,websocket greet and accept,200,OK,Usuarios de chat 1-23,text,true,,34,0,37,37,null,0,0,0
+1778467674623,0,Web socket handshake,200,OK,Usuarios de chat 1-32,,true,,0,12,37,37,null,0,0,0
+1778467674692,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""new_message"",{""roomId"":""95A55712"",""nickname"":""user_5"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:49.122382""}]'",Usuarios de chat 1-9,,false,,0,31,37,37,null,0,0,0
+1778467674703,1,websocket greet and accept,200,OK,Usuarios de chat 1-20,text,true,,34,0,36,36,null,0,0,0
+1778467674704,0,Send Message,200,OK,Usuarios de chat 1-12,,true,,0,58,36,36,null,0,0,0
+1778467674711,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""new_message"",{""roomId"":""95A55712"",""nickname"":""user_3"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:47.754146""}]'",Usuarios de chat 1-6,,false,,0,31,36,36,null,0,0,0
+1778467674718,1,websocket confirm handshake,200,OK,Usuarios de chat 1-27,,true,,0,7,35,35,null,0,0,0
+1778467674742,0,Ask for connection,200,OK,Usuarios de chat 1-28,,true,,0,8,35,35,null,0,0,0
+1778467674359,399,Verificar sala y pin,200,OK,Usuarios de chat 1-41,text,true,,234,250,35,35,http://localhost:3001/api/rooms/95A55712/verify,399,0,0
+1778467674811,0,Salir Chat,200,OK,Usuarios de chat 1-8,,true,,0,8,35,35,null,0,0,0
+1778467674828,0,websocket greet and accept,200,OK,Usuarios de chat 1-26,text,true,,34,0,35,35,null,0,0,0
+1778467674870,0,websocket greet and accept,200,OK,Usuarios de chat 1-25,text,true,,34,0,35,35,null,0,0,0
+1778467674922,1,Salir Chat,200,OK,Usuarios de chat 1-11,,true,,0,8,35,35,null,0,0,0
+1778467674948,0,Ask for connection,200,OK,Usuarios de chat 1-29,,true,,0,8,36,36,null,0,0,0
+1778467674979,0,Obtener lista de usuarios,200,OK,Usuarios de chat 1-16,text,true,,20085,0,36,36,null,0,0,0
+1778467674979,0,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-16,text,true,,19955,0,36,36,null,0,0,0
+1778467674982,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-21,text,false,Test failed: text expected to contain /room_joined/,39,0,36,36,null,0,0,0
+1778467675001,0,websocket accept handshake,200,OK,Usuarios de chat 1-31,text,true,,8,0,36,36,null,0,0,0
+1778467675040,0,Join Room,200,OK,Usuarios de chat 1-24,,true,,0,80,36,36,null,0,0,0
+1778467675097,0,websocket accept handshake,200,OK,Usuarios de chat 1-34,text,true,,8,0,36,36,null,0,0,0
+1778467674566,539,Verificar sala y pin,200,OK,Usuarios de chat 1-42,text,true,,234,251,36,36,http://localhost:3001/api/rooms/95A55712/verify,539,0,1
+1778467674766,340,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-35,,true,,129,244,36,36,null,0,0,340
+1778467675163,0,Join Room,200,OK,Usuarios de chat 1-17,,true,,0,80,36,36,null,0,0,0
+1778467675243,0,Debug Sampler,200,OK,Usuarios de chat 1-39,text,true,,19632,0,36,36,null,0,0,0
+1778467675272,0,Salir Chat,200,OK,Usuarios de chat 1-13,,true,,0,8,36,36,null,0,0,0
+1778467675358,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-18,text,false,Test failed: text expected to contain /room_joined/,197,0,36,36,null,0,0,0
+1778467675465,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-22,text,false,Test failed: text expected to contain /room_joined/,197,0,37,37,null,0,0,0
+1778467675468,0,Join Room,200,OK,Usuarios de chat 1-26,,true,,0,80,37,37,null,0,0,0
+1778467675493,0,Extra reader for noop,200,OK,Usuarios de chat 1-28,text,true,,3,0,37,37,null,0,0,0
+1778467675496,0,Web socket handshake,200,OK,Usuarios de chat 1-33,,true,,0,12,37,37,null,0,0,0
+1778467674978,531,Verificar sala y pin,200,OK,Usuarios de chat 1-43,text,true,,234,250,37,37,http://localhost:3001/api/rooms/95A55712/verify,531,0,1
+1778467675141,369,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-37,,true,,129,243,37,37,null,0,0,369
+1778467675260,250,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-36,,true,,129,244,37,37,null,0,0,250
+1778467675553,0,Salir Chat,200,OK,Usuarios de chat 1-10,,true,,0,8,37,37,null,0,0,0
+1778467675556,0,websocket confirm handshake,200,OK,Usuarios de chat 1-30,,true,,0,7,37,37,null,0,0,0
+1778467675579,1,Obtener lista de usuarios,200,OK,Usuarios de chat 1-19,text,true,,20073,0,37,37,null,0,0,0
+1778467675579,1,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-19,text,true,,19956,0,37,37,null,0,0,0
+1778467675603,0,Recibir Mensaje,200,OK,Usuarios de chat 1-12,text,false,Test failed: text expected to contain /new_message/,135,0,37,37,null,0,0,0
+1778467675626,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-15,text,true,,196,0,37,37,null,0,0,0
+1778467675635,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""user_joined"",{""nickname"":""user_11""}]'",Usuarios de chat 1-8,,false,,0,31,37,37,null,0,0,0
+1778467675659,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-24,text,false,Test failed: text expected to contain /room_joined/,40,0,36,36,null,0,0,0
+1778467675664,0,Debug Sampler,200,OK,Usuarios de chat 1-38,text,true,,19632,0,36,36,null,0,0,0
+1778467675680,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-16,text,true,,197,0,36,36,null,0,0,0
+1778467675746,0,Recibir Mensaje,200,OK,Usuarios de chat 1-14,text,false,Test failed: text expected to contain /new_message/,134,0,36,36,null,0,0,0
+1778467675782,0,Web socket handshake,200,OK,Usuarios de chat 1-35,,true,,0,12,36,36,null,0,0,0
+1778467675848,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""new_message"",{""roomId"":""95A55712"",""nickname"":""user_1"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:49.759762""}]'",Usuarios de chat 1-11,,false,,0,31,36,36,null,0,0,0
+1778467675603,251,HTTP Request,200,OK,Usuarios de chat 1-40,text,true,,300,180,35,35,http://localhost:3001/socket.io/?EIO=4&transport=polling,251,0,0
+1778467675732,123,HTTP Request,200,OK,Usuarios de chat 1-42,text,true,,300,179,35,35,http://localhost:3001/socket.io/?EIO=4&transport=polling,123,0,0
+1778467675905,0,websocket accept handshake,200,OK,Usuarios de chat 1-32,text,true,,8,0,35,35,null,0,0,0
+1778467675922,0,Join Room,200,OK,Usuarios de chat 1-20,,true,,0,80,35,35,null,0,0,0
+1778467675970,0,Join Room,200,OK,Usuarios de chat 1-23,,true,,0,80,36,36,null,0,0,0
+1778467676013,0,websocket greet and accept,200,OK,Usuarios de chat 1-28,text,true,,34,0,36,36,null,0,0,0
+1778467676015,0,Ask for connection,200,OK,Usuarios de chat 1-27,,true,,0,8,36,36,null,0,0,0
+1778467676036,1,Obtener lista de usuarios,200,OK,Usuarios de chat 1-22,text,false,Test failed: text expected to contain /user_list/,19996,0,36,36,null,0,0,0
+1778467676036,1,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-22,text,true,,19956,0,36,36,null,0,0,0
+1778467675969,128,HTTP Request,200,OK,Usuarios de chat 1-41,text,true,,300,180,36,36,http://localhost:3001/socket.io/?EIO=4&transport=polling,128,0,0
+1778467676106,0,Join Room,200,OK,Usuarios de chat 1-25,,true,,0,80,36,36,null,0,0,0
+1778467676117,1,websocket confirm handshake,200,OK,Usuarios de chat 1-34,,true,,0,7,36,36,null,0,0,0
+1778467676180,0,Extra reader for noop,200,OK,Usuarios de chat 1-29,text,true,,3,0,36,36,null,0,0,0
+1778467676208,1,Obtener lista de usuarios,200,OK,Usuarios de chat 1-24,text,true,,20087,0,36,36,null,0,0,0
+1778467676208,1,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-24,text,true,,19956,0,36,36,null,0,0,0
+1778467676130,141,HTTP Request,200,OK,Usuarios de chat 1-43,text,true,,300,180,36,36,http://localhost:3001/socket.io/?EIO=4&transport=polling,141,0,0
+1778467676401,0,Obtener lista de usuarios,200,OK,Usuarios de chat 1-21,text,true,,20074,0,36,36,null,0,0,0
+1778467676401,0,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-21,text,true,,19956,0,36,36,null,0,0,0
+1778467676408,1,websocket confirm handshake,200,OK,Usuarios de chat 1-31,,true,,0,7,36,36,null,0,0,0
+1778467676066,376,Verificar sala y pin,200,OK,Usuarios de chat 1-45,text,true,,234,251,37,37,http://localhost:3001/api/rooms/95A55712/verify,376,0,1
+1778467676379,120,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-39,,true,,129,244,37,37,null,0,0,120
+1778467676508,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""new_message"",{""roomId"":""95A55712"",""nickname"":""user_7"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:50.283561""}]'",Usuarios de chat 1-13,,false,,0,31,37,37,null,0,0,0
+1778467676536,0,Obtener lista de usuarios,200,OK,Usuarios de chat 1-18,text,false,Test failed: text expected to contain /user_list/,22334,0,36,36,null,0,0,0
+1778467676536,0,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-18,text,true,,19956,0,36,36,null,0,0,0
+1778467676565,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-17,text,false,Test failed: text expected to contain /room_joined/,40,0,36,36,null,0,0,0
+1778467676575,0,Salir Chat,200,OK,Usuarios de chat 1-14,,true,,0,8,36,36,null,0,0,0
+1778467676649,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""user_list"",{""users"":[""user_1"",""user_7"",""user_6"",""user_4"",""user_9"",""user_8"",""user_11"",""user_13"",""user_14"",""user_10"",""user_12""]}]'",Usuarios de chat 1-10,,false,,0,31,36,36,null,0,0,0
+1778467676649,0,Send Message,200,OK,Usuarios de chat 1-15,,true,,0,58,36,36,null,0,0,0
+1778467676694,0,Ask for connection,200,OK,Usuarios de chat 1-34,,true,,0,8,35,35,null,0,0,0
+1778467676699,0,websocket accept handshake,200,OK,Usuarios de chat 1-35,text,true,,8,0,35,35,null,0,0,0
+1778467676743,0,Ask for connection,200,OK,Usuarios de chat 1-30,,true,,0,8,35,35,null,0,0,0
+1778467676756,1,Join Room,200,OK,Usuarios de chat 1-28,,true,,0,80,35,35,null,0,0,0
+1778467676783,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-19,text,true,,1850,0,35,35,null,0,0,0
+1778467676788,0,Send Message,200,OK,Usuarios de chat 1-16,,true,,0,58,35,35,null,0,0,0
+1778467676811,0,websocket greet and accept,200,OK,Usuarios de chat 1-29,text,true,,34,0,35,35,null,0,0,0
+1778467676204,639,Verificar sala y pin,200,OK,Usuarios de chat 1-44,text,true,,234,250,35,35,http://localhost:3001/api/rooms/95A55712/verify,639,0,1
+1778467676869,0,websocket accept handshake,200,OK,Usuarios de chat 1-33,text,true,,8,0,35,35,null,0,0,0
+1778467676874,0,Web socket handshake,200,OK,Usuarios de chat 1-37,,true,,0,12,35,35,null,0,0,0
+1778467676878,0,websocket confirm handshake,200,OK,Usuarios de chat 1-32,,true,,0,7,35,35,null,0,0,0
+1778467676891,0,Debug Sampler,200,OK,Usuarios de chat 1-40,text,true,,19632,0,35,35,null,0,0,0
+1778467676920,0,Debug Sampler,200,OK,Usuarios de chat 1-41,text,true,,19632,0,35,35,null,0,0,0
+1778467676933,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-26,text,false,Test failed: text expected to contain /room_joined/,40,0,36,36,null,0,0,0
+1778467676948,0,Web socket handshake,200,OK,Usuarios de chat 1-36,,true,,0,12,36,36,null,0,0,0
+1778467677019,0,Extra reader for noop,200,OK,Usuarios de chat 1-27,text,true,,3,0,36,36,null,0,0,0
+1778467676501,519,Verificar sala y pin,200,OK,Usuarios de chat 1-46,text,true,,234,250,36,36,http://localhost:3001/api/rooms/95A55712/verify,519,0,1
+1778467677031,0,Salir Chat,200,OK,Usuarios de chat 1-12,,true,,0,8,36,36,null,0,0,0
+1778467677104,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-23,text,true,,2554,0,36,36,null,0,0,0
+1778467677129,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-24,text,true,,2554,0,36,36,null,0,0,0
+1778467677170,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-20,text,true,,2554,0,36,36,null,0,0,0
+1778467677191,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-22,text,true,,131,0,36,36,null,0,0,0
+1778467677075,120,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-38,,true,,129,243,36,36,null,0,0,120
+1778467677210,0,Debug Sampler,200,OK,Usuarios de chat 1-42,text,true,,19631,0,36,36,null,0,0,0
+1778467677220,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-25,text,false,Test failed: text expected to contain /room_joined/,40,0,36,36,null,0,0,0
+1778467677243,0,Extra reader for noop,200,OK,Usuarios de chat 1-34,text,true,,3,0,36,36,null,0,0,0
+1778467677247,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""user_joined"",{""nickname"":""user_10""}]'",Usuarios de chat 1-14,,false,,0,31,36,36,null,0,0,0
+1778467677307,0,Debug Sampler,200,OK,Usuarios de chat 1-43,text,true,,19632,0,35,35,null,0,0,0
+1778467677337,0,Extra reader for noop,200,OK,Usuarios de chat 1-30,text,true,,3,0,35,35,null,0,0,0
+1778467677401,1,Recibir Mensaje,200,OK,Usuarios de chat 1-15,text,false,Test failed: text expected to contain /new_message/,39,0,35,35,null,0,0,0
+1778467677498,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-21,text,true,,2202,0,36,36,null,0,0,0
+1778467677509,0,websocket confirm handshake,200,OK,Usuarios de chat 1-33,,true,,0,7,36,36,null,0,0,0
+1778467677433,176,Verificar sala y pin,200,OK,Usuarios de chat 1-47,text,true,,234,251,36,36,http://localhost:3001/api/rooms/95A55712/verify,176,0,1
+1778467677617,0,Ask for connection,200,OK,Usuarios de chat 1-32,,true,,0,8,36,36,null,0,0,0
+1778467677644,0,Recibir Mensaje,200,OK,Usuarios de chat 1-16,text,false,Test failed: text expected to contain /new_message/,140,0,36,36,null,0,0,0
+1778467677441,224,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-41,,true,,129,244,36,36,null,0,0,224
+1778467677668,1,Ask for connection,200,OK,Usuarios de chat 1-31,,true,,0,8,36,36,null,0,0,0
+1778467677733,0,Join Room,200,OK,Usuarios de chat 1-29,,true,,0,80,36,36,null,0,0,0
+1778467677803,1,Obtener lista de usuarios,200,OK,Usuarios de chat 1-25,text,true,,20117,0,36,36,null,0,0,0
+1778467677804,0,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-25,text,true,,19956,0,36,36,null,0,0,0
+1778467677807,1,websocket confirm handshake,200,OK,Usuarios de chat 1-35,,true,,0,7,36,36,null,0,0,0
+1778467677825,0,Obtener lista de usuarios,200,OK,Usuarios de chat 1-20,text,true,,20106,0,36,36,null,0,0,0
+1778467677825,0,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-20,text,true,,19955,0,36,36,null,0,0,0
+1778467677843,0,websocket accept handshake,200,OK,Usuarios de chat 1-37,text,true,,8,0,36,36,null,0,0,0
+1778467677884,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-18,text,true,,140,0,36,36,null,0,0,0
+1778467677840,66,HTTP Request,200,OK,Usuarios de chat 1-45,text,true,,300,180,36,36,http://localhost:3001/socket.io/?EIO=4&transport=polling,66,0,0
+1778467677776,131,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-40,,true,,129,244,36,36,null,0,0,131
+1778467677922,0,Obtener lista de usuarios,200,OK,Usuarios de chat 1-17,text,true,,20096,0,36,36,null,0,0,0
+1778467677922,0,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-17,text,true,,19955,0,36,36,null,0,0,0
+1778467677952,1,HTTP Request,200,OK,Usuarios de chat 1-44,text,true,,300,179,37,37,http://localhost:3001/socket.io/?EIO=4&transport=polling,1,0,0
+1778467677970,0,Web socket handshake,200,OK,Usuarios de chat 1-39,,true,,0,12,37,37,null,0,0,0
+1778467678020,0,Send Message,200,OK,Usuarios de chat 1-21,,true,,0,58,37,37,null,0,0,0
+1778467678126,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-28,text,false,Test failed: text expected to contain /room_joined/,197,0,37,37,null,0,0,0
+1778467678126,0,Obtener lista de usuarios,200,OK,Usuarios de chat 1-26,text,true,,20097,0,37,37,null,0,0,0
+1778467678126,0,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-26,text,true,,19956,0,37,37,null,0,0,0
+1778467678172,0,Web socket handshake,200,OK,Usuarios de chat 1-41,,true,,0,12,37,37,null,0,0,0
+1778467678191,0,websocket greet and accept,200,OK,Usuarios de chat 1-27,text,true,,34,0,37,37,null,0,0,0
+1778467678203,0,Obtener lista de usuarios,200,OK,Usuarios de chat 1-23,text,true,,20116,0,37,37,null,0,0,0
+1778467678203,0,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-23,text,true,,19955,0,37,37,null,0,0,0
+1778467678205,0,Send Message,200,OK,Usuarios de chat 1-19,,true,,0,58,37,37,null,0,0,0
+1778467678209,0,Extra reader for noop,200,OK,Usuarios de chat 1-31,text,true,,3,0,37,37,null,0,0,0
+1778467678109,177,Verificar sala y pin,200,OK,Usuarios de chat 1-48,text,true,,234,251,37,37,http://localhost:3001/api/rooms/95A55712/verify,177,0,1
+1778467678262,25,HTTP Request,200,OK,Usuarios de chat 1-46,text,true,,300,180,37,37,http://localhost:3001/socket.io/?EIO=4&transport=polling,25,0,0
+1778467678222,66,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-43,,true,,129,244,37,37,null,0,0,66
+1778467678293,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""new_message"",{""roomId"":""95A55712"",""nickname"":""user_4"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:51.079732""}]'",Usuarios de chat 1-12,,false,,0,31,37,37,null,0,0,0
+1778467678294,0,Web socket handshake,200,OK,Usuarios de chat 1-38,,true,,0,12,36,36,null,0,0,0
+1778467678324,0,Send Message,200,OK,Usuarios de chat 1-22,,true,,0,58,36,36,null,0,0,0
+1778467678361,0,websocket accept handshake,200,OK,Usuarios de chat 1-36,text,true,,8,0,36,36,null,0,0,0
+1778467678397,0,Salir Chat,200,OK,Usuarios de chat 1-15,,true,,0,8,36,36,null,0,0,0
+1778467678399,0,Send Message,200,OK,Usuarios de chat 1-24,,true,,0,58,36,36,null,0,0,0
+1778467678451,0,Ask for connection,200,OK,Usuarios de chat 1-35,,true,,0,8,36,36,null,0,0,0
+1778467678488,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-25,text,true,,2554,0,36,36,null,0,0,0
+1778467678511,0,websocket greet and accept,200,OK,Usuarios de chat 1-30,text,true,,34,0,36,36,null,0,0,0
+1778467678520,2,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-42,,true,,129,244,36,36,null,0,0,2
+1778467678561,0,Web socket handshake,200,OK,Usuarios de chat 1-40,,true,,0,12,36,36,null,0,0,0
+1778467678577,0,Recibir Mensaje,200,OK,Usuarios de chat 1-21,text,false,Test failed: text expected to contain /new_message/,118,0,36,36,null,0,0,0
+1778467678589,0,websocket greet and accept,200,OK,Usuarios de chat 1-34,text,true,,34,0,36,36,null,0,0,0
+1778467678608,0,Debug Sampler,200,OK,Usuarios de chat 1-44,text,true,,19632,0,36,36,null,0,0,0
+1778467678619,0,Ask for connection,200,OK,Usuarios de chat 1-33,,true,,0,8,36,36,null,0,0,0
+1778467678538,177,Verificar sala y pin,200,OK,Usuarios de chat 1-50,text,true,,234,251,36,36,http://localhost:3001/api/rooms/95A55712/verify,177,0,1
+1778467678729,0,Recibir Mensaje,200,OK,Usuarios de chat 1-19,text,false,Test failed: text expected to contain /new_message/,117,0,36,36,null,0,0,0
+1778467678591,181,HTTP Request,200,OK,Usuarios de chat 1-47,text,true,,300,180,36,36,http://localhost:3001/socket.io/?EIO=4&transport=polling,180,0,0
+1778467678794,0,Salir Chat,200,OK,Usuarios de chat 1-16,,true,,0,8,36,36,null,0,0,0
+1778467678842,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-17,text,true,,2554,0,36,36,null,0,0,0
+1778467678853,0,Extra reader for noop,200,OK,Usuarios de chat 1-32,text,true,,3,0,36,36,null,0,0,0
+1778467678898,0,Send Message,200,OK,Usuarios de chat 1-18,,true,,0,58,36,36,null,0,0,0
+1778467678905,1,Debug Sampler,200,OK,Usuarios de chat 1-46,text,true,,19632,0,36,36,null,0,0,0
+1778467678594,350,Verificar sala y pin,200,OK,Usuarios de chat 1-49,text,true,,234,250,36,36,http://localhost:3001/api/rooms/95A55712/verify,350,0,1
+1778467678959,1,Obtener lista de usuarios,200,OK,Usuarios de chat 1-28,text,false,Test failed: text expected to contain /user_list/,19996,0,36,36,null,0,0,0
+1778467678959,1,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-28,text,true,,19956,0,36,36,null,0,0,0
+1778467678971,0,websocket confirm handshake,200,OK,Usuarios de chat 1-36,,true,,0,7,36,36,null,0,0,0
+1778467678999,0,Recibir Mensaje,200,OK,Usuarios de chat 1-24,text,false,Test failed: text expected to contain /new_message/,131,0,36,36,null,0,0,0
+1778467679013,0,Recibir Mensaje,200,OK,Usuarios de chat 1-22,text,false,Test failed: text expected to contain /new_message/,39,0,36,36,null,0,0,0
+1778467679017,0,Debug Sampler,200,OK,Usuarios de chat 1-45,text,true,,19632,0,36,36,null,0,0,0
+1778467679056,0,websocket confirm handshake,200,OK,Usuarios de chat 1-37,,true,,0,7,36,36,null,0,0,0
+1778467679086,0,websocket accept handshake,200,OK,Usuarios de chat 1-39,text,true,,8,0,36,36,null,0,0,0
+1778467679096,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-29,text,true,,2906,0,36,36,null,0,0,0
+1778467679103,0,Join Room,200,OK,Usuarios de chat 1-27,,true,,0,80,36,36,null,0,0,0
+1778467679140,0,websocket accept handshake,200,OK,Usuarios de chat 1-38,text,true,,8,0,36,36,null,0,0,0
+1778467679253,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-20,text,true,,161,0,36,36,null,0,0,0
+1778467679244,34,HTTP Request,200,OK,Usuarios de chat 1-48,text,true,,300,179,36,36,http://localhost:3001/socket.io/?EIO=4&transport=polling,34,0,0
+1778467679288,0,websocket accept handshake,200,OK,Usuarios de chat 1-41,text,true,,8,0,36,36,null,0,0,0
+1778467679314,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-23,text,true,,40,0,36,36,null,0,0,0
+1778467679341,0,Salir Chat,200,OK,Usuarios de chat 1-21,,true,,0,8,36,36,null,0,0,0
+1778467679358,0,Web socket handshake,200,OK,Usuarios de chat 1-42,,true,,0,12,36,36,null,0,0,0
+1778467679369,0,Extra reader for noop,200,OK,Usuarios de chat 1-33,text,true,,3,0,36,36,null,0,0,0
+1778467679390,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-26,text,true,,141,0,36,36,null,0,0,0
+1778467679417,1,Join Room,200,OK,Usuarios de chat 1-34,,true,,0,80,36,36,null,0,0,0
+1778467679419,0,Send Message,200,OK,Usuarios de chat 1-17,,true,,0,58,36,36,null,0,0,0
+1778467679428,1,Salir Chat,200,OK,Usuarios de chat 1-19,,true,,0,8,36,36,null,0,0,0
+1778467679438,0,Extra reader for noop,200,OK,Usuarios de chat 1-35,text,true,,3,0,36,36,null,0,0,0
+1778467679440,0,Web socket handshake,200,OK,Usuarios de chat 1-43,,true,,0,12,36,36,null,0,0,0
+1778467679450,0,websocket greet and accept,200,OK,Usuarios de chat 1-31,text,true,,34,0,36,36,null,0,0,0
+1778467679454,0,Recibir Mensaje,200,OK,Usuarios de chat 1-18,text,true,,197,0,36,36,null,0,0,0
+1778467679546,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""user_joined"",{""nickname"":""user_18""}]'",Usuarios de chat 1-16,,false,,0,31,36,36,null,0,0,0
+1778467679555,0,Ask for connection,200,OK,Usuarios de chat 1-36,,true,,0,8,35,35,null,0,0,0
+1778467679571,21,HTTP Request,200,OK,Usuarios de chat 1-50,text,true,,300,180,35,35,http://localhost:3001/socket.io/?EIO=4&transport=polling,21,0,0
+1778467679484,108,HTTP Request,200,OK,Usuarios de chat 1-49,text,true,,300,180,35,35,http://localhost:3001/socket.io/?EIO=4&transport=polling,108,0,0
+1778467679430,163,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-46,,true,,129,243,35,35,null,0,0,163
+1778467679622,1,Send Message,200,OK,Usuarios de chat 1-25,,true,,0,58,35,35,null,0,0,0
+1778467679626,0,websocket greet and accept,200,OK,Usuarios de chat 1-32,text,true,,34,0,35,35,null,0,0,0
+1778467679631,0,websocket confirm handshake,200,OK,Usuarios de chat 1-39,,true,,0,7,35,35,null,0,0,0
+1778467679641,1,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-45,,true,,129,243,35,35,null,0,0,1
+1778467679665,0,websocket accept handshake,200,OK,Usuarios de chat 1-40,text,true,,8,0,35,35,null,0,0,0
+1778467679688,0,Join Room,200,OK,Usuarios de chat 1-30,,true,,0,80,35,35,null,0,0,0
+1778467679696,1,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-28,text,true,,161,0,35,35,null,0,0,0
+1778467679728,0,Debug Sampler,200,OK,Usuarios de chat 1-47,text,true,,19632,0,35,35,null,0,0,0
+1778467679872,0,websocket greet and accept,200,OK,Usuarios de chat 1-33,text,true,,34,0,35,35,null,0,0,0
+1778467679895,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""user_list"",{""users"":[""user_1"",""user_6"",""user_4"",""user_9"",""user_8"",""user_11"",""user_13"",""user_14"",""user_10"",""user_12"",""user_15""]}]'",Usuarios de chat 1-15,,false,,0,31,35,35,null,0,0,0
+1778467679805,113,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-44,,true,,129,243,34,34,null,0,0,113
+1778467679955,0,websocket confirm handshake,200,OK,Usuarios de chat 1-41,,true,,0,7,34,34,null,0,0,0
+1778467679956,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""user_list"",{""users"":[""user_8"",""user_11"",""user_13"",""user_14"",""user_10"",""user_12"",""user_15"",""user_19"",""user_21"",""user_16""]}]'",Usuarios de chat 1-21,,false,,0,31,34,34,null,0,0,0
+1778467679992,0,Join Room,200,OK,Usuarios de chat 1-31,,true,,0,80,33,33,null,0,0,0
+1778467680007,0,Salir Chat,200,OK,Usuarios de chat 1-18,,true,,0,8,33,33,null,0,0,0
+1778467680021,0,websocket accept handshake,200,OK,Usuarios de chat 1-42,text,true,,8,0,33,33,null,0,0,0
+1778467680039,0,Ask for connection,200,OK,Usuarios de chat 1-37,,true,,0,8,33,33,null,0,0,0
+1778467680041,0,Obtener lista de usuarios,200,OK,Usuarios de chat 1-29,text,true,,20126,0,33,33,null,0,0,0
+1778467680041,0,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-29,text,true,,19955,0,33,33,null,0,0,0
+1778467680180,0,Extra reader for noop,200,OK,Usuarios de chat 1-36,text,true,,3,0,33,33,null,0,0,0
+1778467680201,0,Recibir Mensaje,200,OK,Usuarios de chat 1-17,text,false,Test failed: text expected to contain /new_message/,141,0,33,33,null,0,0,0
+1778467680221,0,Web socket handshake,200,OK,Usuarios de chat 1-46,,true,,0,12,33,33,null,0,0,0
+1778467680228,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-30,text,true,,4138,0,33,33,null,0,0,0
+1778467680294,0,Web socket handshake,200,OK,Usuarios de chat 1-45,,true,,0,12,33,33,null,0,0,0
+1778467680322,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-27,text,true,,3786,0,33,33,null,0,0,0
+1778467680424,0,websocket confirm handshake,200,OK,Usuarios de chat 1-38,,true,,0,7,33,33,null,0,0,0
+1778467680442,1,Debug Sampler,200,OK,Usuarios de chat 1-48,text,true,,19632,0,33,33,null,0,0,0
+1778467680474,0,Salir Chat,200,OK,Usuarios de chat 1-22,,true,,0,8,33,33,null,0,0,0
+1778467680474,0,Salir Chat,200,OK,Usuarios de chat 1-24,,true,,0,8,33,33,null,0,0,0
+1778467680491,1,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-47,,true,,129,244,33,33,null,0,0,1
+1778467680506,0,Web socket handshake,200,OK,Usuarios de chat 1-44,,true,,0,12,33,33,null,0,0,0
+1778467680558,0,Send Message,200,OK,Usuarios de chat 1-23,,true,,0,58,33,33,null,0,0,0
+1778467680588,1,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-29,text,true,,197,0,33,33,null,0,0,0
+1778467680596,0,websocket greet and accept,200,OK,Usuarios de chat 1-35,text,true,,34,0,33,33,null,0,0,0
+1778467680625,0,Send Message,200,OK,Usuarios de chat 1-26,,true,,0,58,33,33,null,0,0,0
+1778467680661,0,Send Message,200,OK,Usuarios de chat 1-20,,true,,0,58,33,33,null,0,0,0
+1778467680709,0,Send Message,200,OK,Usuarios de chat 1-28,,true,,0,58,33,33,null,0,0,0
+1778467680743,0,Join Room,200,OK,Usuarios de chat 1-32,,true,,0,80,33,33,null,0,0,0
+1778467680776,0,Recibir Mensaje,200,OK,Usuarios de chat 1-25,text,false,Test failed: text expected to contain /new_message/,161,0,33,33,null,0,0,0
+1778467680776,0,websocket accept handshake,200,OK,Usuarios de chat 1-46,text,true,,8,0,33,33,null,0,0,0
+1778467680777,0,websocket confirm handshake,200,OK,Usuarios de chat 1-40,,true,,0,7,33,33,null,0,0,0
+1778467680808,0,Ask for connection,200,OK,Usuarios de chat 1-39,,true,,0,8,33,33,null,0,0,0
+1778467680837,0,websocket accept handshake,200,OK,Usuarios de chat 1-43,text,true,,8,0,33,33,null,0,0,0
+1778467680855,0,Join Room,200,OK,Usuarios de chat 1-33,,true,,0,80,33,33,null,0,0,0
+1778467680890,0,Ask for connection,200,OK,Usuarios de chat 1-41,,true,,0,8,33,33,null,0,0,0
+1778467680906,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""new_message"",{""roomId"":""95A55712"",""nickname"":""user_13"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:53.664333""}]'",Usuarios de chat 1-19,,false,,0,31,33,33,null,0,0,0
+1778467680906,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-34,text,false,Test failed: text expected to contain /room_joined/,40,0,33,33,null,0,0,0
+1778467680954,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-31,text,false,Test failed: text expected to contain /room_joined/,40,0,32,32,null,0,0,0
+1778467681010,0,websocket greet and accept,200,OK,Usuarios de chat 1-36,text,true,,34,0,32,32,null,0,0,0
+1778467681016,0,Debug Sampler,200,OK,Usuarios de chat 1-49,text,true,,19632,0,32,32,null,0,0,0
+1778467681042,0,Extra reader for noop,200,OK,Usuarios de chat 1-37,text,true,,3,0,32,32,null,0,0,0
+1778467681074,0,Debug Sampler,200,OK,Usuarios de chat 1-50,text,true,,19632,0,32,32,null,0,0,0
+1778467681074,0,Obtener lista de usuarios,200,OK,Usuarios de chat 1-30,text,true,,20116,0,32,32,null,0,0,0
+1778467681074,0,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-30,text,true,,19955,0,32,32,null,0,0,0
+1778467681106,0,websocket accept handshake,200,OK,Usuarios de chat 1-45,text,true,,8,0,32,32,null,0,0,0
+1778467681207,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""user_left"",{""nickname"":""user_11""}]'",Usuarios de chat 1-18,,false,,0,31,32,32,null,0,0,0
+1778467681222,1,websocket confirm handshake,200,OK,Usuarios de chat 1-42,,true,,0,7,31,31,null,0,0,0
+1778467681323,0,Web socket handshake,200,OK,Usuarios de chat 1-47,,true,,0,12,31,31,null,0,0,0
+1778467681369,0,Extra reader for noop,200,OK,Usuarios de chat 1-39,text,true,,3,0,31,31,null,0,0,0
+1778467681387,0,Recibir Mensaje,200,OK,Usuarios de chat 1-28,text,false,Test failed: text expected to contain /new_message/,2906,0,31,31,null,0,0,0
+1778467681438,1,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-33,text,true,,4842,0,31,31,null,0,0,0
+1778467681469,0,websocket confirm handshake,200,OK,Usuarios de chat 1-46,,true,,0,7,31,31,null,0,0,0
+1778467681469,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-32,text,true,,4842,0,31,31,null,0,0,0
+1778467681476,0,Ask for connection,200,OK,Usuarios de chat 1-38,,true,,0,8,31,31,null,0,0,0
+1778467681523,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""user_left"",{""nickname"":""user_10""}]'",Usuarios de chat 1-24,,false,,0,31,31,31,null,0,0,0
+1778467681592,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-30,text,true,,40,0,30,30,null,0,0,0
+1778467681609,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""user_list"",{""users"":[""user_13"",""user_14"",""user_10"",""user_12"",""user_15"",""user_19"",""user_21"",""user_16"",""user_18"",""user_22""]}]'",Usuarios de chat 1-22,,false,,0,31,30,30,null,0,0,0
+1778467681675,0,Send Message,200,OK,Usuarios de chat 1-29,,true,,0,58,29,29,null,0,0,0
+1778467681675,0,Recibir Mensaje,200,OK,Usuarios de chat 1-23,text,false,Test failed: text expected to contain /new_message/,161,0,29,29,null,0,0,0
+1778467681690,0,Recibir Mensaje,200,OK,Usuarios de chat 1-20,text,false,Test failed: text expected to contain /new_message/,42,0,29,29,null,0,0,0
+1778467681690,0,Obtener lista de usuarios,200,OK,Usuarios de chat 1-27,text,true,,20116,0,29,29,null,0,0,0
+1778467681690,0,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-27,text,true,,19955,0,29,29,null,0,0,0
+1778467681691,0,websocket confirm handshake,200,OK,Usuarios de chat 1-45,,true,,0,7,29,29,null,0,0,0
+1778467681695,1,Salir Chat,200,OK,Usuarios de chat 1-17,,true,,0,8,29,29,null,0,0,0
+1778467681775,0,websocket accept handshake,200,OK,Usuarios de chat 1-44,text,true,,8,0,29,29,null,0,0,0
+1778467681775,0,Join Room,200,OK,Usuarios de chat 1-36,,true,,0,80,29,29,null,0,0,0
+1778467681775,0,Join Room,200,OK,Usuarios de chat 1-35,,true,,0,80,29,29,null,0,0,0
+1778467681891,0,websocket greet and accept,200,OK,Usuarios de chat 1-37,text,true,,34,0,29,29,null,0,0,0
+1778467681827,121,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-48,,true,,129,244,29,29,null,0,0,121
+1778467682016,0,Ask for connection,200,OK,Usuarios de chat 1-42,,true,,0,8,29,29,null,0,0,0
+1778467682121,0,Recibir Mensaje,200,OK,Usuarios de chat 1-26,text,false,Test failed: text expected to contain /new_message/,42,0,29,29,null,0,0,0
+1778467682121,1,Obtener lista de usuarios,200,OK,Usuarios de chat 1-34,text,true,,20107,0,29,29,null,0,0,0
+1778467682122,0,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-34,text,true,,19956,0,29,29,null,0,0,0
+1778467682153,0,websocket confirm handshake,200,OK,Usuarios de chat 1-43,,true,,0,7,29,29,null,0,0,0
+1778467682168,0,Salir Chat,200,OK,Usuarios de chat 1-25,,true,,0,8,29,29,null,0,0,0
+1778467682033,144,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-50,,true,,129,244,29,29,null,0,0,144
+1778467682199,0,Ask for connection,200,OK,Usuarios de chat 1-40,,true,,0,8,29,29,null,0,0,0
+1778467682261,0,websocket accept handshake,200,OK,Usuarios de chat 1-47,text,true,,8,0,29,29,null,0,0,0
+1778467682308,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-36,text,false,Test failed: text expected to contain /room_joined/,40,0,29,29,null,0,0,0
+1778467682324,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-27,text,true,,40,0,29,29,null,0,0,0
+1778467682324,0,Salir Chat,200,OK,Usuarios de chat 1-20,,true,,0,8,29,29,null,0,0,0
+1778467682339,1,Obtener lista de usuarios,200,OK,Usuarios de chat 1-31,text,true,,20117,0,29,29,null,0,0,0
+1778467682339,1,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-31,text,true,,19956,0,29,29,null,0,0,0
+1778467682356,0,Ask for connection,200,OK,Usuarios de chat 1-45,,true,,0,8,29,29,null,0,0,0
+1778467682376,0,Extra reader for noop,200,OK,Usuarios de chat 1-41,text,true,,3,0,29,29,null,0,0,0
+1778467682391,0,Recibir Mensaje,200,OK,Usuarios de chat 1-29,text,true,,197,0,29,29,null,0,0,0
+1778467682475,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-35,text,false,Test failed: text expected to contain /room_joined/,40,0,29,29,null,0,0,0
+1778467682475,3,WebSocket Open Connection,101,Switching Protocols,Usuarios de chat 1-49,,true,,129,242,29,29,null,0,0,3
+1778467682506,0,websocket greet and accept,200,OK,Usuarios de chat 1-39,text,true,,34,0,29,29,null,0,0,0
+1778467682607,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""user_list"",{""users"":[""user_14"",""user_12"",""user_15"",""user_19"",""user_21"",""user_16"",""user_18"",""user_22"",""user_24"",""user_17"",""user_26""]}]'",Usuarios de chat 1-17,,false,,0,31,29,29,null,0,0,0
+1778467682623,0,websocket confirm handshake,200,OK,Usuarios de chat 1-44,,true,,0,7,28,28,null,0,0,0
+1778467682675,0,Obtener lista de usuarios,200,OK,Usuarios de chat 1-33,text,true,,20116,0,28,28,null,0,0,0
+1778467682675,0,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-33,text,true,,19955,0,28,28,null,0,0,0
+1778467682710,0,Salir Chat,200,OK,Usuarios de chat 1-28,,true,,0,8,28,28,null,0,0,0
+1778467682742,0,Obtener lista de usuarios,200,OK,Usuarios de chat 1-32,text,true,,20106,0,28,28,null,0,0,0
+1778467682742,0,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-32,text,true,,19955,0,28,28,null,0,0,0
+1778467682807,0,Extra reader for noop,200,OK,Usuarios de chat 1-38,text,true,,3,0,28,28,null,0,0,0
+1778467682839,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""user_left"",{""nickname"":""user_14""}]'",Usuarios de chat 1-20,,false,,0,31,28,28,null,0,0,0
+1778467682870,0,Web socket handshake,200,OK,Usuarios de chat 1-48,,true,,0,12,27,27,null,0,0,0
+1778467682892,0,Ask for connection,200,OK,Usuarios de chat 1-46,,true,,0,8,27,27,null,0,0,0
+1778467682925,0,Salir Chat,200,OK,Usuarios de chat 1-29,,true,,0,8,27,27,null,0,0,0
+1778467682943,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-34,text,true,,197,0,27,27,null,0,0,0
+1778467683023,0,Salir Chat,200,OK,Usuarios de chat 1-23,,true,,0,8,27,27,null,0,0,0
+1778467683041,1,Send Message,200,OK,Usuarios de chat 1-30,,true,,0,58,27,27,null,0,0,0
+1778467683190,0,Join Room,200,OK,Usuarios de chat 1-37,,true,,0,80,27,27,null,0,0,0
+1778467683190,0,Extra reader for noop,200,OK,Usuarios de chat 1-45,text,true,,3,0,27,27,null,0,0,0
+1778467683205,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-31,text,true,,4138,0,27,27,null,0,0,0
+1778467683347,0,Ask for connection,200,OK,Usuarios de chat 1-43,,true,,0,8,27,27,null,0,0,0
+1778467683377,0,Send Message,200,OK,Usuarios de chat 1-27,,true,,0,58,27,27,null,0,0,0
+1778467683377,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""new_message"",{""roomId"":""95A55712"",""nickname"":""user_15"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:56.843288""}]'",Usuarios de chat 1-25,,false,,0,31,27,27,null,0,0,0
+1778467683377,0,Salir Chat,200,OK,Usuarios de chat 1-26,,true,,0,8,27,27,null,0,0,0
+1778467683424,0,Extra reader for noop,200,OK,Usuarios de chat 1-40,text,true,,3,0,26,26,null,0,0,0
+1778467683500,0,Obtener lista de usuarios,200,OK,Usuarios de chat 1-36,text,true,,20117,0,26,26,null,0,0,0
+1778467683500,0,websocket confirm handshake,200,OK,Usuarios de chat 1-47,,true,,0,7,26,26,null,0,0,0
+1778467683500,0,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-36,text,true,,19956,0,26,26,null,0,0,0
+1778467683514,0,Extra reader for noop,200,OK,Usuarios de chat 1-42,text,true,,3,0,26,26,null,0,0,0
+1778467683515,0,Web socket handshake,200,OK,Usuarios de chat 1-50,,true,,0,12,26,26,null,0,0,0
+1778467683530,0,Join Room,200,OK,Usuarios de chat 1-39,,true,,0,80,26,26,null,0,0,0
+1778467683530,0,Web socket handshake,200,OK,Usuarios de chat 1-49,,true,,0,12,26,26,null,0,0,0
+1778467683530,0,Send Message,200,OK,Usuarios de chat 1-34,,true,,0,58,26,26,null,0,0,0
+1778467683561,0,Obtener lista de usuarios,200,OK,Usuarios de chat 1-35,text,true,,20117,0,26,26,null,0,0,0
+1778467683561,0,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-35,text,true,,19956,0,26,26,null,0,0,0
+1778467683577,0,websocket greet and accept,200,OK,Usuarios de chat 1-41,text,true,,34,0,26,26,null,0,0,0
+1778467683700,0,websocket greet and accept,200,OK,Usuarios de chat 1-38,text,true,,34,0,26,26,null,0,0,0
+1778467683747,0,Send Message,200,OK,Usuarios de chat 1-31,,true,,0,58,26,26,null,0,0,0
+1778467683808,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-33,text,true,,197,0,26,26,null,0,0,0
+1778467683823,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""user_list"",{""users"":[""user_12"",""user_15"",""user_19"",""user_21"",""user_16"",""user_18"",""user_22"",""user_24"",""user_17"",""user_26"",""user_20"",""user_23"",""user_25""]}]'",Usuarios de chat 1-23,,false,,0,31,26,26,null,0,0,0
+1778467683824,0,Ask for connection,200,OK,Usuarios de chat 1-44,,true,,0,8,26,26,null,0,0,0
+1778467683884,0,websocket accept handshake,200,OK,Usuarios de chat 1-48,text,true,,8,0,25,25,null,0,0,0
+1778467683953,0,Extra reader for noop,200,OK,Usuarios de chat 1-46,text,true,,3,0,25,25,null,0,0,0
+1778467683953,0,Extra reader for noop,200,OK,Usuarios de chat 1-43,text,true,,3,0,25,25,null,0,0,0
+1778467683973,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""user_list"",{""users"":[""user_15"",""user_19"",""user_21"",""user_16"",""user_18"",""user_22"",""user_24"",""user_17"",""user_26"",""user_20"",""user_23"",""user_25"",""user_28""]}]'",Usuarios de chat 1-28,,false,,0,31,25,25,null,0,0,0
+1778467684034,0,Recibir Mensaje,200,OK,Usuarios de chat 1-27,text,false,Test failed: text expected to contain /new_message/,151,0,24,24,null,0,0,0
+1778467684060,0,Recibir Mensaje,200,OK,Usuarios de chat 1-34,text,false,Test failed: text expected to contain /new_message/,3962,0,24,24,null,0,0,0
+1778467684140,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-35,text,true,,161,0,24,24,null,0,0,0
+1778467684171,0,websocket accept handshake,200,OK,Usuarios de chat 1-49,text,true,,8,0,24,24,null,0,0,0
+1778467684204,0,Join Room,200,OK,Usuarios de chat 1-41,,true,,0,80,24,24,null,0,0,0
+1778467684235,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-32,text,true,,161,0,24,24,null,0,0,0
+1778467684275,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""new_message"",{""roomId"":""95A55712"",""nickname"":""user_22"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:58.325059""}]'",Usuarios de chat 1-29,,false,,0,31,24,24,null,0,0,0
+1778467684374,0,websocket greet and accept,200,OK,Usuarios de chat 1-42,text,true,,34,0,23,23,null,0,0,0
+1778467684374,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-37,text,false,Test failed: text expected to contain /room_joined/,40,0,23,23,null,0,0,0
+1778467684389,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-36,text,true,,5018,0,23,23,null,0,0,0
+1778467684427,0,Recibir Mensaje,200,OK,Usuarios de chat 1-30,text,false,Test failed: text expected to contain /new_message/,161,0,23,23,null,0,0,0
+1778467684442,0,websocket accept handshake,200,OK,Usuarios de chat 1-50,text,true,,8,0,23,23,null,0,0,0
+1778467684460,0,Recibir Mensaje,200,OK,Usuarios de chat 1-31,text,false,Test failed: text expected to contain /new_message/,161,0,23,23,null,0,0,0
+1778467684491,0,websocket greet and accept,200,OK,Usuarios de chat 1-40,text,true,,34,0,23,23,null,0,0,0
+1778467684506,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""room_joined"",{""room"":{""roomId"":""95A55712"",""name"":""Sala prueba"",""type"":""text""},""history"":[{""roomId"":""95A55712"",""nickname"":""user_2"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:47.118451""},{""roomId"":""95A55712"",""nickname"":""user_3"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:47.754146""},{""roomId"":""95A55712"",""nickname"":""user_5"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:49.122382""},{""roomId"":""95A55712"",""nickname"":""user_1"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:49.759762""},{""roomId"":""95A55712"",""nickname"":""user_7"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:50.283561""},{""roomId"":""95A55712"",""nickname"":""user_4"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:51.079732""},{""roomId"":""95A55712"",""nickname"":""user_9"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:51.123220""},{""roomId"":""95A55712"",""nickname"":""user_6"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:52.258710""},{""roomId"":""95A55712"",""nickname"":""user_11"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:52.870418""},{""roomId"":""95A55712"",""nickname"":""user_8"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:52.966788""},{""roomId"":""95A55712"",""nickname"":""user_13"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:53.664333""},{""roomId"":""95A55712"",""nickname"":""user_10"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:53.750483""},{""roomId"":""95A55712"",""nickname"":""user_14"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:54.416116""},{""roomId"":""95A55712"",""nickname"":""user_12"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:54.762936""}]}]'",Usuarios de chat 1-26,,false,,0,31,23,23,null,0,0,0
+1778467684575,0,websocket greet and accept,200,OK,Usuarios de chat 1-45,text,true,,34,0,22,22,null,0,0,0
+1778467684670,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-39,text,true,,5546,0,22,22,null,0,0,0
+1778467684701,0,websocket greet and accept,200,OK,Usuarios de chat 1-46,text,true,,34,0,22,22,null,0,0,0
+1778467684717,0,Join Room,200,OK,Usuarios de chat 1-38,,true,,0,80,22,22,null,0,0,0
+1778467684749,0,Send Message,200,OK,Usuarios de chat 1-33,,true,,0,58,22,22,null,0,0,0
+1778467684775,0,Send Message,200,OK,Usuarios de chat 1-32,,true,,0,58,22,22,null,0,0,0
+1778467684775,0,Ask for connection,200,OK,Usuarios de chat 1-47,,true,,0,8,22,22,null,0,0,0
+1778467684831,1,websocket confirm handshake,200,OK,Usuarios de chat 1-48,,true,,0,7,22,22,null,0,0,0
+1778467684943,0,websocket greet and accept,200,OK,Usuarios de chat 1-43,text,true,,34,0,22,22,null,0,0,0
+1778467684975,0,Extra reader for noop,200,OK,Usuarios de chat 1-44,text,true,,3,0,22,22,null,0,0,0
+1778467684993,0,Salir Chat,200,OK,Usuarios de chat 1-34,,true,,0,8,22,22,null,0,0,0
+1778467684993,0,websocket confirm handshake,200,OK,Usuarios de chat 1-49,,true,,0,7,22,22,null,0,0,0
+1778467685090,1,Send Message,200,OK,Usuarios de chat 1-35,,true,,0,58,22,22,null,0,0,0
+1778467685175,0,Join Room,200,OK,Usuarios de chat 1-40,,true,,0,80,22,22,null,0,0,0
+1778467685292,0,Join Room,200,OK,Usuarios de chat 1-46,,true,,0,80,22,22,null,0,0,0
+1778467685338,1,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-41,text,true,,5722,0,22,22,null,0,0,0
+1778467685354,0,Join Room,200,OK,Usuarios de chat 1-45,,true,,0,80,22,22,null,0,0,0
+1778467685369,1,Obtener lista de usuarios,200,OK,Usuarios de chat 1-37,text,true,,20074,0,22,22,null,0,0,0
+1778467685369,1,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-37,text,true,,19955,0,22,22,null,0,0,0
+1778467685474,0,Recibir Mensaje,200,OK,Usuarios de chat 1-32,text,false,Test failed: text expected to contain /new_message/,42,0,22,22,null,0,0,0
+1778467685490,0,Extra reader for noop,200,OK,Usuarios de chat 1-47,text,true,,3,0,22,22,null,0,0,0
+1778467685507,0,Salir Chat,200,OK,Usuarios de chat 1-27,,true,,0,8,22,22,null,0,0,0
+1778467685656,0,Salir Chat,200,OK,Usuarios de chat 1-30,,true,,0,8,22,22,null,0,0,0
+1778467685672,0,Ask for connection,200,OK,Usuarios de chat 1-48,,true,,0,8,22,22,null,0,0,0
+1778467685749,1,Join Room,200,OK,Usuarios de chat 1-42,,true,,0,80,22,22,null,0,0,0
+1778467685787,0,Send Message,200,OK,Usuarios de chat 1-36,,true,,0,58,22,22,null,0,0,0
+1778467685890,0,Join Room,200,OK,Usuarios de chat 1-43,,true,,0,80,22,22,null,0,0,0
+1778467685890,0,websocket confirm handshake,200,OK,Usuarios de chat 1-50,,true,,0,7,22,22,null,0,0,0
+1778467685890,0,Recibir Mensaje,200,OK,Usuarios de chat 1-35,text,false,Test failed: text expected to contain /new_message/,42,0,22,22,null,0,0,0
+1778467685906,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""user_list"",{""users"":[""user_18"",""user_22"",""user_24"",""user_17"",""user_26"",""user_20"",""user_23"",""user_25"",""user_28"",""user_29"",""user_27"",""user_34""]}]'",Usuarios de chat 1-34,,false,,0,31,22,22,null,0,0,0
+1778467685921,0,Salir Chat,200,OK,Usuarios de chat 1-31,,true,,0,8,21,21,null,0,0,0
+1778467685921,0,Obtener lista de usuarios,200,OK,Usuarios de chat 1-41,text,true,,20096,0,21,21,null,0,0,0
+1778467685921,0,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-41,text,true,,19955,0,21,21,null,0,0,0
+1778467685936,0,Ask for connection,200,OK,Usuarios de chat 1-49,,true,,0,8,21,21,null,0,0,0
+1778467685975,0,Obtener lista de usuarios,200,OK,Usuarios de chat 1-39,text,true,,20086,0,21,21,null,0,0,0
+1778467685975,0,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-39,text,true,,19955,0,21,21,null,0,0,0
+1778467685990,0,Recibir Mensaje,200,OK,Usuarios de chat 1-33,text,false,Test failed: text expected to contain /new_message/,40,0,21,21,null,0,0,0
+1778467686136,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-46,text,true,,6250,0,21,21,null,0,0,0
+1778467686173,1,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-40,text,true,,6250,0,21,21,null,0,0,0
+1778467686194,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-38,text,true,,5722,0,21,21,null,0,0,0
+1778467686334,0,websocket greet and accept,200,OK,Usuarios de chat 1-44,text,true,,34,0,21,21,null,0,0,0
+1778467686350,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-37,text,true,,5194,0,21,21,null,0,0,0
+1778467686350,0,Salir Chat,200,OK,Usuarios de chat 1-32,,true,,0,8,21,21,null,0,0,0
+1778467686396,0,websocket greet and accept,200,OK,Usuarios de chat 1-47,text,true,,34,0,21,21,null,0,0,0
+1778467686428,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""user_left"",{""nickname"":""user_19""}]'",Usuarios de chat 1-27,,false,,0,31,21,21,null,0,0,0
+1778467686521,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-43,text,false,Test failed: text expected to contain /room_joined/,197,0,20,20,null,0,0,0
+1778467686536,0,Salir Chat,200,OK,Usuarios de chat 1-35,,true,,0,8,20,20,null,0,0,0
+1778467686552,0,Salir Chat,200,OK,Usuarios de chat 1-33,,true,,0,8,20,20,null,0,0,0
+1778467686567,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""user_left"",{""nickname"":""user_22""}]'",Usuarios de chat 1-31,,false,,0,31,20,20,null,0,0,0
+1778467686597,0,Recibir Mensaje,200,OK,Usuarios de chat 1-36,text,false,Test failed: text expected to contain /new_message/,161,0,19,19,null,0,0,0
+1778467686627,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""user_list"",{""users"":[""user_22"",""user_24"",""user_17"",""user_26"",""user_20"",""user_23"",""user_25"",""user_28"",""user_29"",""user_27"",""user_34"",""user_30"",""user_31""]}]'",Usuarios de chat 1-30,,false,,0,31,19,19,null,0,0,0
+1778467686737,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-41,text,true,,151,0,18,18,null,0,0,0
+1778467686754,0,Ask for connection,200,OK,Usuarios de chat 1-50,,true,,0,8,18,18,null,0,0,0
+1778467686830,0,Extra reader for noop,200,OK,Usuarios de chat 1-49,text,true,,3,0,18,18,null,0,0,0
+1778467686830,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-45,text,false,Test failed: text expected to contain /room_joined/,161,0,18,18,null,0,0,0
+1778467686925,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-42,text,false,Test failed: text expected to contain /room_joined/,40,0,18,18,null,0,0,0
+1778467686954,0,Join Room,200,OK,Usuarios de chat 1-44,,true,,0,80,18,18,null,0,0,0
+1778467687126,0,Extra reader for noop,200,OK,Usuarios de chat 1-48,text,true,,3,0,18,18,null,0,0,0
+1778467687152,1,Obtener lista de usuarios,200,OK,Usuarios de chat 1-43,text,false,Test failed: text expected to contain /user_list/,26382,0,18,18,null,0,0,0
+1778467687152,1,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-43,text,true,,19956,0,18,18,null,0,0,0
+1778467687173,0,Obtener lista de usuarios,200,OK,Usuarios de chat 1-46,text,true,,20116,0,18,18,null,0,0,0
+1778467687173,0,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-46,text,true,,19955,0,18,18,null,0,0,0
+1778467687175,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""user_list"",{""users"":[""user_26"",""user_20"",""user_23"",""user_25"",""user_28"",""user_29"",""user_27"",""user_34"",""user_30"",""user_31"",""user_32"",""user_33""]}]'",Usuarios de chat 1-33,,false,,0,31,18,18,null,0,0,0
+1778467687231,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""room_joined"",{""room"":{""roomId"":""95A55712"",""name"":""Sala prueba"",""type"":""text""},""history"":[{""roomId"":""95A55712"",""nickname"":""user_2"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:47.118451""},{""roomId"":""95A55712"",""nickname"":""user_3"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:47.754146""},{""roomId"":""95A55712"",""nickname"":""user_5"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:49.122382""},{""roomId"":""95A55712"",""nickname"":""user_1"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:49.759762""},{""roomId"":""95A55712"",""nickname"":""user_7"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:50.283561""},{""roomId"":""95A55712"",""nickname"":""user_4"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:51.079732""},{""roomId"":""95A55712"",""nickname"":""user_9"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:51.123220""},{""roomId"":""95A55712"",""nickname"":""user_6"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:52.258710""},{""roomId"":""95A55712"",""nickname"":""user_11"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:52.870418""},{""roomId"":""95A55712"",""nickname"":""user_8"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:52.966788""},{""roomId"":""95A55712"",""nickname"":""user_13"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:53.664333""},{""roomId"":""95A55712"",""nickname"":""user_10"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:53.750483""},{""roomId"":""95A55712"",""nickname"":""user_14"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:54.416116""},{""roomId"":""95A55712"",""nickname"":""user_12"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:54.762936""},{""roomId"":""95A55712"",""nickname"":""user_15"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:56.843288""},{""roomId"":""95A55712"",""nickname"":""user_16"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:57.020146""},{""roomId"":""95A55712"",""nickname"":""user_21"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:58.020813""},{""roomId"":""95A55712"",""nickname"":""user_19"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:58.287816""},{""roomId"":""95A55712"",""nickname"":""user_22"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:58.325059""},{""roomId"":""95A55712"",""nickname"":""user_24"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:58.402071""},{""roomId"":""95A55712"",""nickname"":""user_18"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:58.945046""},{""roomId"":""95A55712"",""nickname"":""user_17"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:59.420749""},{""roomId"":""95A55712"",""nickname"":""user_25"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:47:59.624215""},{""roomId"":""95A55712"",""nickname"":""user_23"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:48:00.560553""},{""roomId"":""95A55712"",""nickname"":""user_26"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:48:00.626770""},{""roomId"":""95A55712"",""nickname"":""user_20"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:48:00.662966""},{""roomId"":""95A55712"",""nickname"":""user_28"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:48:00.711334""},{""roomId"":""95A55712"",""nickname"":""user_29"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:48:01.677306""}]}]'",Usuarios de chat 1-35,,false,,0,31,17,17,null,0,0,0
+1778467687346,0,Obtener lista de usuarios,200,OK,Usuarios de chat 1-40,text,true,,20106,0,16,16,null,0,0,0
+1778467687346,0,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-40,text,true,,19955,0,16,16,null,0,0,0
+1778467687377,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-39,text,true,,197,0,16,16,null,0,0,0
+1778467687377,0,Obtener lista de usuarios,200,OK,Usuarios de chat 1-38,text,true,,20106,0,16,16,null,0,0,0
+1778467687377,0,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-38,text,true,,19955,0,16,16,null,0,0,0
+1778467687421,0,Join Room,200,OK,Usuarios de chat 1-47,,true,,0,80,16,16,null,0,0,0
+1778467687468,0,Send Message,200,OK,Usuarios de chat 1-41,,true,,0,58,16,16,null,0,0,0
+1778467687555,1,Salir Chat,200,OK,Usuarios de chat 1-36,,true,,0,8,16,16,null,0,0,0
+1778467687587,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""new_message"",{""roomId"":""95A55712"",""nickname"":""user_29"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:48:01.677306""}]'",Usuarios de chat 1-32,,false,,0,31,16,16,null,0,0,0
+1778467687722,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-43,text,true,,161,0,15,15,null,0,0,0
+1778467687780,0,Obtener lista de usuarios,200,OK,Usuarios de chat 1-45,text,false,Test failed: text expected to contain /user_list/,19998,0,15,15,null,0,0,0
+1778467687780,0,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-45,text,true,,19956,0,15,15,null,0,0,0
+1778467687819,0,Send Message,200,OK,Usuarios de chat 1-37,,true,,0,58,15,15,null,0,0,0
+1778467687893,1,Obtener lista de usuarios,200,OK,Usuarios de chat 1-42,text,true,,20107,0,15,15,null,0,0,0
+1778467687893,1,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-42,text,true,,19956,0,15,15,null,0,0,0
+1778467688035,0,websocket greet and accept,200,OK,Usuarios de chat 1-49,text,true,,34,0,15,15,null,0,0,0
+1778467688069,0,Extra reader for noop,200,OK,Usuarios de chat 1-50,text,true,,3,0,15,15,null,0,0,0
+1778467688077,0,Send Message,200,OK,Usuarios de chat 1-39,,true,,0,58,15,15,null,0,0,0
+1778467688295,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-46,text,true,,40,0,15,15,null,0,0,0
+1778467688325,0,Send Message,200,OK,Usuarios de chat 1-43,,true,,0,58,15,15,null,0,0,0
+1778467688418,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-38,text,true,,197,0,15,15,null,0,0,0
+1778467688424,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""user_list"",{""users"":[""user_26"",""user_20"",""user_23"",""user_28"",""user_29"",""user_27"",""user_34"",""user_30"",""user_31"",""user_32"",""user_33"",""user_36"",""user_35""]}]'",Usuarios de chat 1-36,,false,,0,31,15,15,null,0,0,0
+1778467688434,0,websocket greet and accept,200,OK,Usuarios de chat 1-48,text,true,,34,0,14,14,null,0,0,0
+1778467688440,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-44,text,true,,6426,0,14,14,null,0,0,0
+1778467688485,0,Recibir Mensaje,200,OK,Usuarios de chat 1-37,text,false,Test failed: text expected to contain /new_message/,119,0,14,14,null,0,0,0
+1778467688490,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-42,text,true,,6250,0,14,14,null,0,0,0
+1778467688585,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-47,text,false,Test failed: text expected to contain /room_joined/,40,0,14,14,null,0,0,0
+1778467688587,0,websocket greet and accept,200,OK,Usuarios de chat 1-50,text,true,,34,0,14,14,null,0,0,0
+1778467688764,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-45,text,true,,40,0,14,14,null,0,0,0
+1778467688801,0,Recibir Mensaje,200,OK,Usuarios de chat 1-39,text,false,Test failed: text expected to contain /new_message/,141,0,14,14,null,0,0,0
+1778467688818,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-40,text,true,,161,0,14,14,null,0,0,0
+1778467688839,0,Recibir Mensaje,200,OK,Usuarios de chat 1-41,text,false,Test failed: text expected to contain /new_message/,42,0,14,14,null,0,0,0
+1778467689032,0,Send Message,200,OK,Usuarios de chat 1-46,,true,,0,58,14,14,null,0,0,0
+1778467689122,0,Recibir Mensaje,200,OK,Usuarios de chat 1-43,text,false,Test failed: text expected to contain /new_message/,40,0,14,14,null,0,0,0
+1778467689125,0,Obtener lista de usuarios,200,OK,Usuarios de chat 1-47,text,true,,20097,0,14,14,null,0,0,0
+1778467689125,0,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-47,text,true,,19956,0,14,14,null,0,0,0
+1778467689417,0,Salir Chat,200,OK,Usuarios de chat 1-37,,true,,0,8,14,14,null,0,0,0
+1778467689420,0,Join Room,200,OK,Usuarios de chat 1-49,,true,,0,80,14,14,null,0,0,0
+1778467689439,0,Send Message,200,OK,Usuarios de chat 1-45,,true,,0,58,14,14,null,0,0,0
+1778467689495,0,Join Room,200,OK,Usuarios de chat 1-48,,true,,0,80,14,14,null,0,0,0
+1778467689701,0,Obtener lista de usuarios,200,OK,Usuarios de chat 1-44,text,true,,20096,0,14,14,null,0,0,0
+1778467689701,0,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-44,text,true,,19955,0,14,14,null,0,0,0
+1778467689707,0,Join Room,200,OK,Usuarios de chat 1-50,,true,,0,80,14,14,null,0,0,0
+1778467689747,0,Recibir Mensaje,200,OK,Usuarios de chat 1-46,text,false,Test failed: text expected to contain /new_message/,151,0,14,14,null,0,0,0
+1778467689844,1,Salir Chat,200,OK,Usuarios de chat 1-39,,true,,0,8,14,14,null,0,0,0
+1778467689892,0,Send Message,200,OK,Usuarios de chat 1-38,,true,,0,58,14,14,null,0,0,0
+1778467689978,0,Send Message,200,OK,Usuarios de chat 1-42,,true,,0,58,14,14,null,0,0,0
+1778467690041,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-47,text,true,,6426,0,14,14,null,0,0,0
+1778467690148,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-48,text,false,Test failed: text expected to contain /room_joined/,197,0,14,14,null,0,0,0
+1778467690245,0,Salir Chat,200,OK,Usuarios de chat 1-41,,true,,0,8,14,14,null,0,0,0
+1778467690307,1,Send Message,200,OK,Usuarios de chat 1-40,,true,,0,58,14,14,null,0,0,0
+1778467690367,0,Salir Chat,200,OK,Usuarios de chat 1-43,,true,,0,8,14,14,null,0,0,0
+1778467690461,0,Recibir Mensaje,200,OK,Usuarios de chat 1-45,text,false,Test failed: text expected to contain /new_message/,151,0,14,14,null,0,0,0
+1778467690570,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-49,text,true,,7306,0,14,14,null,0,0,0
+1778467690746,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-44,text,true,,40,0,14,14,null,0,0,0
+1778467690864,0,Recibir Mensaje,200,OK,Usuarios de chat 1-40,text,false,Test failed: text expected to contain /new_message/,42,0,14,14,null,0,0,0
+1778467690865,0,Send Message,200,OK,Usuarios de chat 1-47,,true,,0,58,14,14,null,0,0,0
+1778467690865,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""new_message"",{""roomId"":""95A55712"",""nickname"":""user_27"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:48:03.423183""}]'",Usuarios de chat 1-37,,false,,0,31,14,14,null,0,0,0
+1778467690929,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""user_list"",{""users"":[""user_33"",""user_36"",""user_35"",""user_37"",""user_39"",""user_41"",""user_38"",""user_40"",""user_46"",""user_45"",""user_42"",""user_43""]}]'",Usuarios de chat 1-43,,false,,0,31,13,13,null,0,0,0
+1778467690960,0,Recibir Mensaje,200,OK,Usuarios de chat 1-38,text,true,,197,0,12,12,null,0,0,0
+1778467690991,0,Salir Chat,200,OK,Usuarios de chat 1-46,,true,,0,8,12,12,null,0,0,0
+1778467691091,0,"Recibir confirmación ""room_joined""",200,OK,Usuarios de chat 1-50,text,true,,7482,0,12,12,null,0,0,0
+1778467691106,1,Obtener lista de usuarios,200,OK,Usuarios de chat 1-48,text,false,Test failed: text expected to contain /user_list/,27438,0,12,12,null,0,0,0
+1778467691106,1,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-48,text,true,,19956,0,12,12,null,0,0,0
+1778467691117,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""user_joined"",{""nickname"":""user_41""}]'",Usuarios de chat 1-39,,false,,0,31,12,12,null,0,0,0
+1778467691289,1,Salir Chat,200,OK,Usuarios de chat 1-45,,true,,0,8,11,11,null,0,0,0
+1778467691320,0,Recibir Mensaje,200,OK,Usuarios de chat 1-42,text,false,Test failed: text expected to contain /new_message/,151,0,11,11,null,0,0,0
+1778467691447,0,Obtener lista de usuarios,200,OK,Usuarios de chat 1-49,text,true,,20096,0,11,11,null,0,0,0
+1778467691447,0,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-49,text,true,,19955,0,11,11,null,0,0,0
+1778467691540,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""user_left"",{""nickname"":""user_30""}]'",Usuarios de chat 1-46,,false,,0,31,11,11,null,0,0,0
+1778467691613,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""new_message"",{""roomId"":""95A55712"",""nickname"":""user_32"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:48:04.894297""}]'",Usuarios de chat 1-41,,false,,0,31,10,10,null,0,0,0
+1778467691719,0,Salir Chat,200,OK,Usuarios de chat 1-38,,true,,0,8,9,9,null,0,0,0
+1778467691728,1,Send Message,200,OK,Usuarios de chat 1-44,,true,,0,58,9,9,null,0,0,0
+1778467691774,0,Recibir Mensaje,200,OK,Usuarios de chat 1-47,text,false,Test failed: text expected to contain /new_message/,141,0,9,9,null,0,0,0
+1778467691847,0,Obtener lista de usuarios,200,OK,Usuarios de chat 1-50,text,true,,20105,0,9,9,null,0,0,0
+1778467691847,0,Obtener lista de usuarios-0,200,OK,Usuarios de chat 1-50,text,true,,19954,0,9,9,null,0,0,0
+1778467691863,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""user_left"",{""nickname"":""user_30""}]'",Usuarios de chat 1-45,,false,,0,31,9,9,null,0,0,0
+1778467691893,0,Salir Chat,200,OK,Usuarios de chat 1-42,,true,,0,8,8,8,null,0,0,0
+1778467691955,0,Salir Chat,200,OK,Usuarios de chat 1-40,,true,,0,8,8,8,null,0,0,0
+1778467692048,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-48,text,true,,151,0,8,8,null,0,0,0
+1778467692421,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""user_left"",{""nickname"":""user_34""}]'",Usuarios de chat 1-38,,false,,0,31,8,8,null,0,0,0
+1778467692482,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""user_left"",{""nickname"":""user_27""}]'",Usuarios de chat 1-40,,false,,0,31,7,7,null,0,0,0
+1778467692801,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-49,text,true,,197,0,6,6,null,0,0,0
+1778467692848,0,Recibir notificacion de ingreso,200,OK,Usuarios de chat 1-50,text,true,,40,0,6,6,null,0,0,0
+1778467692862,0,Recibir Mensaje,200,OK,Usuarios de chat 1-44,text,false,Test failed: text expected to contain /new_message/,141,0,6,6,null,0,0,0
+1778467692909,1,Salir Chat,200,OK,Usuarios de chat 1-47,,true,,0,8,6,6,null,0,0,0
+1778467693374,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""new_message"",{""roomId"":""95A55712"",""nickname"":""user_36"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:48:05.934310""}]'",Usuarios de chat 1-42,,false,,0,31,6,6,null,0,0,0
+1778467693407,0,Send Message,200,OK,Usuarios de chat 1-48,,true,,0,58,5,5,null,0,0,0
+1778467693579,0,Send Message,200,OK,Usuarios de chat 1-50,,true,,0,58,5,5,null,0,0,0
+1778467693579,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""new_message"",{""roomId"":""95A55712"",""nickname"":""user_41"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:48:07.598463""}]'",Usuarios de chat 1-47,,false,,0,31,5,5,null,0,0,0
+1778467693836,0,Salir Chat,200,OK,Usuarios de chat 1-44,,true,,0,8,4,4,null,0,0,0
+1778467694088,1,Send Message,200,OK,Usuarios de chat 1-49,,true,,0,58,4,4,null,0,0,0
+1778467694382,0,Recibir Mensaje,200,OK,Usuarios de chat 1-48,text,false,Test failed: text expected to contain /new_message/,151,0,4,4,null,0,0,0
+1778467694491,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""user_list"",{""users"":[""user_37"",""user_39"",""user_41"",""user_38"",""user_40"",""user_46"",""user_45"",""user_42"",""user_43"",""user_44"",""user_47""]}]'",Usuarios de chat 1-44,,false,,0,31,4,4,null,0,0,0
+1778467694784,0,Recibir Mensaje,200,OK,Usuarios de chat 1-50,text,false,Test failed: text expected to contain /new_message/,151,0,3,3,null,0,0,0
+1778467695376,0,Recibir Mensaje,200,OK,Usuarios de chat 1-49,text,false,Test failed: text expected to contain /new_message/,151,0,3,3,null,0,0,0
+1778467695410,0,Salir Chat,200,OK,Usuarios de chat 1-48,,true,,0,8,3,3,null,0,0,0
+1778467695797,1,Salir Chat,200,OK,Usuarios de chat 1-50,,true,,0,8,3,3,null,0,0,0
+1778467695954,1,Salir Chat,200,OK,Usuarios de chat 1-49,,true,,0,8,3,3,null,0,0,0
+1778467696076,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""user_joined"",{""nickname"":""user_50""}]'",Usuarios de chat 1-48,,false,,0,31,3,3,null,0,0,0
+1778467696463,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""new_message"",{""roomId"":""95A55712"",""nickname"":""user_38"",""content"":""Hola, como estan?"",""type"":""text"",""fileName"":null,""filePath"":null,""fileType"":null,""timestamp"":""2026-05-11T02:48:10.006833""}]'",Usuarios de chat 1-50,,false,,0,31,2,2,null,0,0,0
+1778467696684,0,WebSocket Close,WebSocket error: unsuccesful close.,"WebSocket error: received not a close frame, but Text frame with text '42[""user_joined"",{""nickname"":""user_48""}]'",Usuarios de chat 1-49,,false,,0,31,1,1,null,0,0,0

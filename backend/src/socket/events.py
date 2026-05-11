@@ -118,7 +118,7 @@ def register_events(socketio):
         user_list = list(room_users[room_id].values())
         socketio.emit("user_list",{"users": user_list},room=room_id)
         # 10. Notificar que alguien entró
-        socketio.emit("user_joined", {"nickname": nickname}, room=room_id)
+        socketio.emit("user_joined", {"nickname": nickname}, room=room_id, include_self=False)
 
 
     @socketio.on("send_message")

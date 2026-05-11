@@ -1,4 +1,6 @@
 import os
+import hashlib
+import time
 from flask import Blueprint, request, jsonify, send_from_directory
 from werkzeug.utils import secure_filename
 from src.models.message import Message
@@ -10,6 +12,12 @@ upload_bp = Blueprint("upload", __name__)
 
 ALLOWED_TYPES = {"image/jpeg", "image/png", "image/gif", "application/pdf"}
 MAX_SIZE      = int(os.getenv("MAX_FILE_SIZE", 10485760))  # 10MB
+
+def generate_unique_hash():
+    """Generate a small unique hash for filename uniqueness."""
+    timestamp = str(time.time()).encode()
+    hash_obj = hashlib.md5(timestamp)
+    return hash_obj.hexdigest()[:8]  # Return first 8 characters
 
 @upload_bp.route("/<room_id>", methods=["POST"])
 def upload_file(room_id):
@@ -52,7 +60,8 @@ def upload_file(room_id):
         return jsonify({"error": "Archivo demasiado grande (máx 10MB)"}), 400
 
     # Guardar archivo de forma segura
-    filename  = secure_filename(f"{room_id}_{file.filename}")
+    unique_hash = generate_unique_hash()
+    filename  = secure_filename(f"{room_id}_{unique_hash}_{file.filename}")
     save_path = os.path.join("uploads", filename)
     file.save(save_path)
 

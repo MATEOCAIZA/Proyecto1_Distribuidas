@@ -77,6 +77,8 @@ class TestUpload:
 
         #Verifica que otro cliente reciba el mensaje
         received_2 = socket_client_2.get_received()
+        print("Eventos")
+        print(received_2)
         file_message = [r for r in received_2 if r["name"] == "new_message"][0]
         msg_data = file_message["args"][0]
 

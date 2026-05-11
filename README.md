@@ -228,3 +228,48 @@ Para desactivar el entorno virtual:
 ```bash
 deactivate
 ```
+
+# Arquitectura 
+
+```mermaid
+  architecture-beta
+
+  group frontend(cloud)[Frontend]
+    service client(logos:vue)[Cliente Web] in frontend
+
+    group backend(cloud)[Backend]
+    service socket_server(server)[Socket Server] in backend
+    service api_server(server)[API REST] in backend
+    service thread_worker(logos:aws-opsworks)[Worker Broadcast] in backend
+
+    junction server_sync in backend
+    socket_server:T -- B:server_sync
+    server_sync:T -- B:api_server
+
+    group docker(logos:docker-icon)[Docker]
+    group databases(database)[BD] in docker
+    service mongo_db(logos:mongodb-icon)[MongoDB] in databases
+    service redis_cache(logos:redis)[Redis] in docker
+
+    junction db_conn
+    api_server:R -- L:db_conn
+    db_conn:R -- L:mongo_db
+  
+    junction cache_conn
+    socket_server:R -- L:cache_conn
+    cache_conn:R -- L:redis_cache
+
+    junction client_socket
+    client:R -- L:client_socket
+    client_socket:R -- L:server_sync
+```
+
+# Pruebas
+
+<html>
+  <body>
+    <div style="text-align: center; margin-top: 50px;">
+      <img src="./backend/tests/testcoverage.png" alt="Testing in progress" style="width: 80%; height: auto;">
+    </div>
+  </body>
+</html>
