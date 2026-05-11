@@ -82,10 +82,10 @@ def register_events(socketio):
             return
 
         # 3. Sesión única por IP (Desactivado para pruebas)
-        # existing = redis_client.get(f"session:{client_ip}")
-        # if existing and existing != request.sid:
-        #     emit("error", {"message": "Ya tienes una sesión activa"})
-        #     return
+        existing = redis_client.get(f"session:{client_ip}")
+        if existing and existing != request.sid:
+          emit("error", {"message": "Ya tienes una sesión activa"})
+          return
 
         # 4. Nickname único en sala
         users_in_room = room_users.get(room_id, {})
@@ -94,7 +94,7 @@ def register_events(socketio):
             return
 
         # 5. Registrar sesión en Redis (1 hora)
-        #redis_client.setex(f"session:{client_ip}", 3600, request.sid)
+        redis_client.setex(f"session:{client_ip}", 3600, request.sid)
 
         # 6. Unir al room de SocketIO
         join_room(room_id)
