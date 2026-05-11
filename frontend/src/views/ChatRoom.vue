@@ -125,9 +125,10 @@
               </div>
               <!-- ✅ FIX: URL relativa, sin hardcodear host -->
               <a
-                v-if="message.file?.url || message.file_path"
-                :href="message.file?.url || message.file_path"
+                v-if="getFileUrl(message)"
+                :href="getFileUrl(message)"
                 target="_blank"
+                download
                 class="btn btn-sm btn-primary"
               >
                 Descargar
@@ -229,6 +230,18 @@ const isOtherUserTyping = ref(false)
 const currentRoomData = computed(() => {
   return roomStore.currentRoom || {}
 })
+
+function getFileUrl(message) {
+  const path = message.file?.url || message.file_path;
+  if (!path) return null;
+  
+  // Si la ruta ya es una URL completa, devolverla
+  if (path.startsWith('http')) return path;
+  
+  // Si es relativa, concatenar el host del backend
+  const baseURL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+  return `${baseURL}${path}`;
+}
 
 onMounted(async () => {
   // 1. Configuración de interfaz
@@ -341,7 +354,6 @@ async function handleFileSelect(event) {
   const file = event.target.files?.[0]
   if (!file) return
 
-  // Validar tipo y tamaño
   const maxSize = 10 * 1024 * 1024 // 10MB
   const allowedTypes = ['image/jpeg', 'image/png', 'image/gif', 'application/pdf']
 
@@ -359,26 +371,34 @@ async function handleFileSelect(event) {
   error.value = null
 
   try {
+    // 1. Subir al backend
     const result = await uploadService.uploadFile(
       route.params.id,
       file,
       chatStore.currentUser.nickname
     )
 
-    // ✅ FIX: propiedad nombrada correctamente (era `result.file_path` sin clave)
-    .addFileMessage({
+    // 2. IMPORTANTE: Construir la URL completa para la descarga
+    // El backend devuelve "/uploads/archivo.jpg", necesitamos el HOST
+    const baseURL = import.meta.env.VITE_API_URL || 'http://localhost:3001'
+    const fullUrl = `${baseURL}${result.file_path}`
+
+    // 3. Agregar localmente al store (optimista)
+    chatStore.addFileMessage({
       name: file.name,
       size: file.size,
-      url: result.file_path
+      url: fullUrl
     })
 
-    chatStore.sendFileMessage({
-      path: result.file_path,
-      type: file.type,
+    // 4. Notificar a los demás por Socket
+    // El backend espera recibir los datos del archivo para retransmitirlos
+    socketService.sendMessage({
+      type: 'file',
+      file_path: fullUrl,
+      file_type: file.type,
       file_name: file.name
     })
 
-    // Scroll al último mensaje
     nextTick(() => {
       if (messagesContainer.value) {
         messagesContainer.value.scrollTop = messagesContainer.value.scrollHeight
@@ -389,8 +409,7 @@ async function handleFileSelect(event) {
     console.error('Upload error:', err)
   } finally {
     loading.value = false
-    // Reset input
-    event.target.value = ''
+    event.target.value = '' // Limpiar input
   }
 }
 
