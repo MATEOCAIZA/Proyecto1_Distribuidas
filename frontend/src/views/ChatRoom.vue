@@ -119,15 +119,18 @@
                   <path d="M13 2V9H20" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
                 </svg>
                 <div class="file-info">
-                  <p class="file-name">{{ message.file?.name }}</p>
+                  <p class="file-name">{{ message.file?.name || message.file_name }}</p>
                   <p class="file-size">{{ formatFileSize(message.file?.size) }}</p>
                 </div>
               </div>
-              <a v-if="message.file?.url" :href="message.file.url" target="_blank" class="btn btn-sm btn-primary">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 1V11M12 7L8 11L4 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M2 13H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
+              <!-- ✅ FIX: URL relativa, sin hardcodear host -->
+              <a
+                v-if="getFileUrl(message)"
+                :href="getFileUrl(message)"
+                target="_blank"
+                download
+                class="btn btn-sm btn-primary"
+              >
                 Descargar
               </a>
             </div>
@@ -228,37 +231,57 @@ const currentRoomData = computed(() => {
   return roomStore.currentRoom || {}
 })
 
+function getFileUrl(message) {
+  const path = message.file?.url || message.file_path;
+  if (!path) return null;
+  
+  // Si la ruta ya es una URL completa, devolverla
+  if (path.startsWith('http')) return path;
+  
+  // Si es relativa, concatenar el host del backend
+  const baseURL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+  return `${baseURL}${path}`;
+}
+
 onMounted(async () => {
-  // Detectar si es móvil
+  // 1. Configuración de interfaz
   isMobile.value = window.innerWidth < 768
   window.addEventListener('resize', handleResize)
 
+  // 2. Recuperación de datos de la URL o Session
   const roomId = route.params.id
   const nickname = route.query.nickname || sessionStorage.getItem('current_nickname')
-
-  if (!nickname || !roomId) {
-    router.push({ name: 'JoinRoom' })
-    return
-  }
-
-  // Obtener datos de la sala
-  const rooms = await roomStore.fetchRooms()
-  const room = roomStore.rooms.find(r => r._id === roomId)
-
-  if (room) {
-    roomStore.setCurrentRoom(room)
-  }
-
-  // Conectar a la sala
   const pin = route.query.pin || sessionStorage.getItem('room_pin')
-  if (!pin) {
+
+  // Redirigir si falta información básica
+  if (!nickname || !roomId || !pin) {
     router.push({ name: 'JoinRoom' })
     return
   }
 
+  // 3. Verificación de la sala
+  try {
+    const success = await roomStore.verifyRoomPin(roomId, pin)
+
+    if (!success) {
+      router.push({ name: 'JoinRoom' })
+      return
+    }
+
+    // Guardar en sesión para que no se pierda al recargar (F5)
+    sessionStorage.setItem('current_nickname', nickname)
+    sessionStorage.setItem('room_pin', pin)
+
+  } catch (err) {
+    console.error('Error al entrar a la sala:', err)
+    router.push({ name: 'JoinRoom' })
+    return
+  }
+
+  // 4. Conectar al chat (Socket)
   chatStore.joinRoom(roomId, pin, nickname)
 
-  // Auto-scroll a los últimos mensajes
+  // 5. Watcher para el scroll automático
   watch(
     () => chatStore.messages.length,
     () => {
@@ -267,12 +290,13 @@ onMounted(async () => {
           messagesContainer.value.scrollTop = messagesContainer.value.scrollHeight
         }
       })
-    }
+    },
+    { immediate: true }
   )
 
-  // Escuchar eventos de escritura
+  // 6. Indicador de escritura
   socketService.on('user_typing', (data) => {
-    if (data.nickname !== chatStore.currentUser?.nickname) {
+    if (data.nickname !== nickname) {
       typingUser.value = data.nickname
       isOtherUserTyping.value = true
       setTimeout(() => {
@@ -330,7 +354,6 @@ async function handleFileSelect(event) {
   const file = event.target.files?.[0]
   if (!file) return
 
-  // Validar tipo y tamaño
   const maxSize = 10 * 1024 * 1024 // 10MB
   const allowedTypes = ['image/jpeg', 'image/png', 'image/gif', 'application/pdf']
 
@@ -348,20 +371,34 @@ async function handleFileSelect(event) {
   error.value = null
 
   try {
+    // 1. Subir al backend
     const result = await uploadService.uploadFile(
       route.params.id,
       file,
-      chatStore.currentUser?.nickname
+      chatStore.currentUser.nickname
     )
 
-    // Agregar mensaje con archivo
+    // 2. IMPORTANTE: Construir la URL completa para la descarga
+    // El backend devuelve "/uploads/archivo.jpg", necesitamos el HOST
+    const baseURL = import.meta.env.VITE_API_URL || 'http://localhost:3001'
+    const fullUrl = `${baseURL}${result.file_path}`
+
+    // 3. Agregar localmente al store (optimista)
     chatStore.addFileMessage({
       name: file.name,
       size: file.size,
-      url: uploadService.getFileUrl(result.filename)
+      url: fullUrl
     })
 
-    // Scroll al último mensaje
+    // 4. Notificar a los demás por Socket
+    // El backend espera recibir los datos del archivo para retransmitirlos
+    socketService.sendMessage({
+      type: 'file',
+      file_path: fullUrl,
+      file_type: file.type,
+      file_name: file.name
+    })
+
     nextTick(() => {
       if (messagesContainer.value) {
         messagesContainer.value.scrollTop = messagesContainer.value.scrollHeight
@@ -372,8 +409,7 @@ async function handleFileSelect(event) {
     console.error('Upload error:', err)
   } finally {
     loading.value = false
-    // Reset input
-    event.target.value = ''
+    event.target.value = '' // Limpiar input
   }
 }
 

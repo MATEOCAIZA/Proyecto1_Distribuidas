@@ -70,14 +70,23 @@ export const useChatStore = defineStore('chat', () => {
     currentRoomId.value = null
   }
 
-  function addFileMessage(fileData) {
-    messages.value.push({
-      type: 'file',
-      nickname: currentUser.value?.nickname,
-      file: fileData,
-      timestamp: new Date().toISOString()
-    })
-  }
+  // Actualiza la función addFileMessage en chat.js
+function addFileMessage(fileData) {
+  messages.value.push({
+    type: 'file',
+    nickname: currentUser.value?.nickname,
+    // El backend devuelve file_path, file_name, etc. 
+    // Debemos normalizar para que el template lo lea bien
+    file: {
+      name: fileData.name,
+      size: fileData.size,
+      url: fileData.url
+    },
+    timestamp: new Date().toISOString()
+  })
+}
+
+
 
   return {
     messages,

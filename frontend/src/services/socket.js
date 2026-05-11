@@ -110,6 +110,10 @@ class SocketService {
     this.emit('send_message', { content })
   }
 
+  sendFileMessage({ path, type, file_name }) {
+  this.socket.emit('send_file_message', { path, type, file_name })
+}
+
   leaveRoom() {
     // ✅ Emite el evento al servidor antes de desconectar
     this.emit('leave_room', {})
